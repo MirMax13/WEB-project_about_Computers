@@ -1,0 +1,223 @@
+/* Загальні стилі */
+header {
+    background-color: #41b3b3; /* Колір фону */
+    color: #fff; /* Колір тексту */
+    padding: 20px; /* Відступи всередині header */
+    text-align: center; /* Вирівнювання тексту по центру */
+    font-family: Verdana, sans-serif; /* Шрифт */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тінь */
+    border-bottom: 2px solid #555; /* Додайте рамку знизу */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f2f2f2;
+    background-image: url("/image/background.jpg"); /* Замініть 'шлях_до_зображення.jpg' на шлях до вашого зображення */
+    background-size: cover; /* Забезпечує масштабування зображення таким чином, щоб воно витягнулося на весь екран */
+    background-position: center; /* Вирівнює зображення по центру */
+    background-attachment: fixed; /* Закріплює зображення, щоб воно залишалося на місці при прокручуванні */
+
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    /* Для заголовків використовуємо шрифт Montserrat. */
+}
+
+/* Стилі для навігації */
+.navbar {
+    background-color: #444; /* Змінено колір для відмінності */
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Додавання тіні */
+    
+}
+
+.navbar h2 {
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul {
+    padding: 0;
+    margin: 0;
+    
+    list-style: none;
+}
+
+.navbar li {
+    display: inline; /* Розміщення елементів в рядок */
+    margin-right: 20px; /* Відступ між пунктами меню */
+    transition: transform 0.3s ease; /* Анімація при наведенні миші */
+}
+
+.navbar li:hover {
+    transform: translateY(-3px); /* Зміна положення при наведенні миші */
+}
+
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    border-color: #555;
+}
+
+/* Стилі для контейнера */
+.container {
+    margin-top: 50px; /* Відступ зверху, щоб не перекривати навігацію */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Стилі для селектора по id */
+#content {
+    max-width: 800px;
+          float: left;
+          width: 70%;
+          background-color: #fff;
+          padding: 20px;
+          box-sizing: border-box;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+      }
+      #content h2 {
+        color: #333; /* Колір тексту */
+        font-size: 24px; /* Розмір шрифту */
+        margin-bottom: 20px; /* Відступ знизу */
+        position: relative; /* Додати позицію для псевдоелемента */
+    }
+    
+    #content h2::before {
+        content: ""; /* Додати контент псевдоелемента */
+        position: absolute; /* Зафіксувати позицію псевдоелемента */
+        top: 0; /* Початок зверху */
+        left: -20px; /* Зміщення вліво */
+        width: 10px; /* Ширина лінії */
+        height: 100%; /* Висота рівна висоті батьківського елемента */
+        background-color: #666; /* Колір роздільної лінії */
+    }
+  /* Стилі для списку */
+  #content ul {
+          list-style-type: disc;
+          margin-left: 20px;
+          line-height: 1.6;
+    margin-bottom: 20px;
+      }
+      /* Стилі для заголовків списку */
+     
+      #content  h3 {
+        color: #333; /* Колір тексту */
+        font-size: 1.5rem; /* Розмір шрифту */
+        margin-top: 15px;
+        padding-bottom: 5px; /* Додати відступ від розділювальної лінії */
+        position: relative; /* Додати позицію для псевдоелемента */
+    }
+    
+    #content  h3::after {
+        content: ""; /* Додати контент псевдоелементу */
+        position: absolute; /* Зафіксувати позицію псевдоелемента */
+        bottom: 0; /* Позиціонувати внизу */
+        left: 0; /* Почати зліва */
+        width: 50px; /* Ширина роздільної лінії */
+        height: 2px; /* Висота роздільної лінії */
+        background-color: #666; /* Колір роздільної лінії */
+    }
+  /* Стилі для таблиці */
+  #content table {
+          width: 100%;
+          border-collapse: collapse;
+      }
+
+      /* Стилі для заголовків таблиці */
+      #content th {
+          background-color: #333;
+          color: #fff;
+          padding: 10px;
+          text-align: left;
+      }
+
+      /* Стилі для комірок таблиці */
+      #content td {
+          border: 1px solid #ddd;
+          padding: 10px;
+      }
+
+      /* Стилі для непарних рядків таблиці */
+      #content tr:nth-child(odd) {
+          background-color: #f2f2f2;
+      }
+  /* Стилі для селектора по тегу */
+  /* Стилі для селектора по класу */
+  .content-paragraph {
+          font-size: 20px;
+          line-height: 1.6;
+          margin-bottom: 20px;
+      }
+  /* Стилі для вбудованого розміщення CSS коду */
+  section img {
+          max-width: 100%;
+          height: auto;
+          margin-bottom: 20px;
+      }
+
+/* Стилі для footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+footer p {
+    margin-bottom: 20px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+footer ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+footer ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+    color: #ddd;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
