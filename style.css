@@ -206,4 +206,24 @@ footer .social-icons a img:hover {
   transform: scale(1.1);
 }
 
+/* Додаткові стилі для зображень */
+.main-image {
+  display: block;
+  margin: 0 auto;
+}
+
+.hardware-image {
+  width: auto;
+  height: 300px;
+  display: block;
+  margin: 0 auto;
+}
+
+.computer-image {
+  width: auto;
+  height: 430px;
+  display: block;
+  margin: 0 auto;
+}
+
 /*# sourceMappingURL=style.css.map */
