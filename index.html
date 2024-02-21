@@ -14,6 +14,10 @@
     <h1>Світ комп'ютерів</h1>
   </header>
 
+  <script>
+    var screenWidth = window.innerWidth;
+    console.log("Ширина екрану: " + screenWidth + "px");
+  </script>
   <main>
     <div class="navbar">
       <ul>
@@ -39,12 +43,12 @@
             
             <img src="image/computer.jpg" alt="Комп'ютер">
           Перегляньте <strong>відео</strong> нижче, щоб дізнатися про різні типи комп’ютерів.
-            <iframe width=100% height="440" src="https://www.youtube.com/embed/Cu3R5it4cQs" frameborder="0" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/Cu3R5it4cQs" frameborder="0" allowfullscreen></iframe>
 
           <strong>Апаратне забезпечення</strong>
           це будь-яка частина комп’ютера, яка має
           <strong>фізичну структуру</strong>, наприклад клавіатуру чи мишу. Він також містить усі внутрішні частини комп’ютера, які ви можете побачити на зображенні нижче.
-            <img class="main-image" loading="lazy" src="image/hardware.png" alt="Апаратне забезпечення" title="апаратне забезпечення">
+            <img loading="lazy" src="image/hardware.png" alt="Апаратне забезпечення" title="апаратне забезпечення">
         </p>
 
         <p class="content-paragraph">
@@ -59,7 +63,7 @@
 
         <ul type="disc">
           <h4><li> Процесор (CPU):</li></h4>
-            <img class="hardware-image" loading="lazy" src="image/processor.jpg" alt="Процесор" title="процесор">
+            <img loading="lazy" src="image/processor.jpg" alt="Процесор" title="процесор">
             <ul>
               <li>Мозок комп'ютера, який виконує інструкції програм.</li>
               <li>Характеризується кількістю ядер, тактовою частотою та кеш-пам'яттю.</li>
@@ -67,7 +71,7 @@
             </ul>
         
           <h4><li>Оперативна пам'ять (RAM):</li></h4>
-            <img class="hardware-image" loading="lazy" src="image/ram.jpg" alt="Оперативна пам'ять" title="оперативна пам'ять">
+            <img loading="lazy" src="image/ram.jpg" alt="Оперативна пам'ять" title="оперативна пам'ять">
             <ul>
               <li>Зберігає дані, які використовуються процесором в даний момент.</li>
               <li>Характеризується об'ємом.</li>
@@ -75,8 +79,8 @@
             </ul>
           <h4><li>Жорсткий диск (HDD) або твердотільний накопичувач (SSD):</li></h4>
             <ul>
-              <img loading="lazy" src="image/hdd.jpg" alt="HDD" title="hdd" width="300" height="300">
-              <img  loading="lazy" src="image/ssd.jpg" alt="SSD" title="ssd"width="300" height="300">
+              <img class = "disk " loading="lazy" src="image/hdd.jpg" alt="HDD" title="hdd" >
+              <img class = "disk " loading="lazy" src="image/ssd.jpg" alt="SSD" title="ssd">
             </ul>
             <ul>
               <li>Зберігає операційну систему, програми та дані користувача.</li>
@@ -84,27 +88,27 @@
               <li>SSD значно швидші, ніж HDD, але й дорожчі.</li>
             </ul>
           <h4><li>Відеокарта:</li></h4>
-            <img class="hardware-image" loading="lazy" src="image/videocard.jpg" alt="Відеокарта" title="відеокарта">
+            <img loading="lazy" src="image/videocard.jpg" alt="Відеокарта" title="відеокарта">
             <ul>
               <li>Обробляє та виводить зображення на монітор.</li>
               <li>Характеризується типом, об'ємом пам'яті та частотою.</li>
               <li>Впливає на якість зображення та можливість запускати комп'ютерні ігри.</li>
             </ul>
           <h4><li>Монітор:</li></h4>
-            <img class="hardware-image" loading="lazy" src="image/monitor.webp" alt="Монітор" title="монітор">
+            <img loading="lazy" src="image/monitor.webp" alt="Монітор" title="монітор">
             <ul>
               <li>Відображає зображення, яке генерує відеокарта.</li>
               <li>Характеризується розміром, роздільною здатністю, типом матриці (IPS, TN) та частотою оновлення.</li>
               <li>Впливає на комфортність роботи та якість зображення.</li>
             </ul>  
           <h4><li>Клавіатура:</li></h4>
-            <img class="hardware-image" loading="lazy" src="image/keyboard.jpeg" alt="Клавіатура" title="клавіатура">
+            <img loading="lazy" src="image/keyboard.jpeg" alt="Клавіатура" title="клавіатура">
             <ul>
               <li>Пристрій для введення тексту та команд.</li>
               <li>Характеризується типом розкладки, типом клавіш (мембранні, механічні) та наявністю додаткових кнопок.</li>
             </ul>
           <h4><li>Миша:</li></h4>
-            <img class="hardware-image" loading="lazy" src="image/mouse.jpg" alt="Мишка" title="мишка">
+            <img loading="lazy" src="image/mouse.jpg" alt="Мишка" title="мишка">
             <ul>
               <li>Пристрій для керування курсором на екрані.</li>
               <li>Характеризується типом сенсора (оптичний, лазерний), роздільною здатністю та наявністю додаткових кнопок.</li>
@@ -194,29 +198,29 @@
           <ul type="disc">
             <li>
               <h4>Суперкомп'ютери:</h4>
-              <img class="computer-image" src="image/supercomputer.jpg" alt="Суперкомп'ютер">
+              <img src="image/supercomputer.jpg" alt="Суперкомп'ютер">
               <strong>Суперкомп'ютери</strong> - це найпотужніші обчислювальні системи,
               що використовуються для наукових досліджень, моделювання клімату,
               шифрування даних та інших складних обчислень.</li>
             <li><h4>Мейнфрейми:</h4>
-              <img class="computer-image" src="image/mainframe.jpg" alt="Мейнфрейм">
+              <img src="image/mainframe.jpg" alt="Мейнфрейм">
               <strong>Мейнфрейми</strong> - це великі комп'ютерні системи, які використовуються для обробки великих обсягів даних у банках,
               страхових компаніях, телекомунікаційних компаніях та інших великих організаціях.</li>
             <li><h4>Сервери:</h4>
-              <img class="computer-image" src="image/server.jpg" alt="Сервер">
+              <img src="image/server.jpg" alt="Сервер">
               <strong>Сервери</strong> - це потужні комп'ютери, які надають доступ до ресурсів
               (файлів, принтерів, програм) для інших комп'ютерів у мережі.</li>
             <li><h4>Персональні комп'ютери (ПК):</h4>
-              <img class="computer-image" src="image/Pc.png" alt="ПК">
+              <img src="image/Pc.png" alt="ПК">
               <strong>Персональні комп'ютери (ПК)</strong> - це найпоширеніший тип
               комп'ютерів, що використовуються для роботи, навчання, розваг тощо./li>
             <li><h4>Планшетні комп'ютери:</h4>
-              <img class="computer-image" src="image/tablet.jpg" alt="Планшет">
+              <img src="image/tablet.jpg" alt="Планшет">
               <strong>Планшетні комп'ютери</strong> - це мобільні пристрої з сенсорним екраном, які
               використовуються для перегляду веб-сторінок, читання книг, перегляду фільмів тощо. 
               </li>
             <li><h4>Смартфони:</h4>
-              <img class="computer-image" src="image/smartphone.jpg" alt="Смартфон">
+              <img src="image/smartphone.jpg" alt="Смартфон">
               <strong>Смартфони</strong> - це мобільні телефони, які можуть виконувати багато функцій, що раніше були доступні лише на комп'ютерах, такі як
               перегляд веб-сторінок, гра в ігри та інші. Часто їх називають міні-комп'ютерами.</li>
           </ul>
@@ -224,19 +228,19 @@
           <h3>За призначенням:</h3>
           <ul type="disc">
             <li><h4>Ігрові комп'ютери:</h4>
-              <img class="computer-image" src="image/gamer-pc.jpg" alt="Ігровий ПК">
+              <img src="image/gamer-pc.jpg" alt="Ігровий ПК">
               <strong>Ігрові комп'ютери</strong> оснащені потужними графічними картами та призначені для запуску комп'ютерних ігор.
             </li>
             <li><h4>Мультимедійні комп'ютери:</h4>
-              <img class="computer-image" src="image/multimedia-pc.jfif" alt="Мультимедійний ПК">
+              <img-image" src="image/multimedia-pc.jfif" alt="Мультимедійний ПК">
               <strong>Мультимедійні комп'ютери</strong> призначені для перегляду фільмів, прослуховування музики, редагування фото та відео.
             </li>
             <li><h4>Нетбуки:</h4>
-              <img class="computer-image" src="image/Netbook.jpg" alt="Нетбук">
+              <img src="image/Netbook.jpg" alt="Нетбук">
               <strong>Нетбуки</strong> - це легкі та компактні ноутбуки, призначені для роботи в Інтернеті та мобільного використання.
             </li>
             <li><h4>Хромбуки:</h4>
-              <img class="computer-image" src="image/chromebook.jpg" alt="Хромбук">
+              <img src="image/chromebook.jpg" alt="Хромбук">
               <strong>Хромбуки</strong> працюють на операційній системі Chrome OS і використовуються для роботи в Інтернеті та хмарних додатках.
             </li>
           </ul>
@@ -244,15 +248,15 @@
           <h3>За потужністю:</h3>
           <ul type="disc">
             <li><h4>Настільні комп'ютери:</h4>
-              <img class="computer-image" src="image/desktop-pc.jpg" alt="Настільний ПК">
+              <img src="image/desktop-pc.jpg" alt="Настільний ПК">
               <strong>Настільні</strong> комп'ютери широко використовуються на роботі, вдома та в навчальних закладах. Вони призначені для розміщення на столі і зазвичай складаються з кількох частин, включаючи корпус, монітор, клавіатуру та мишу.
             </li>
             <li><h4>Ноутбуки:</h4>
-              <img class="computer-image" src="image/notebook.jpg" alt="Ноутбук">
+              <img src="image/notebook.jpg" alt="Ноутбук">
               <strong>Ноутбук</strong> - це портативний комп'ютер, який працює від батарейок. Вони дозволяють використовувати комп'ютер практично будь-де завдяки своїй портативності.
             </li>
             <li><h4>Ультрабуки:</h4>
-              <img class="computer-image" src="image/ultrabook.jpg" alt="Ультрабук">
+              <img src="image/ultrabook.jpg" alt="Ультрабук">
               <strong>Ультрабуки</strong> - це тонкі та легкі ноутбуки, які поєднують в собі стильний дизайн і високу продуктивність. Ультрабуки відрізняються високою швидкістю роботи, широкими можливостями підключення та тривалим часом автономної роботи, що робить їх популярними серед користувачів, які цінують мобільність та продуктивність.
             </li>
           </ul>

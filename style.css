@@ -16,7 +16,6 @@ body {
   font-size: 20px;
   font-family: "Roboto", sans-serif;
   background-color: #f2f2f2;
-  background-image: url("/image/background.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -26,6 +25,66 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Montserrat", sans-serif; /* Для заголовків використовуємо шрифт Montserrat. */
 }
 
+@media only screen and (max-width: 638px) {
+  .navbar ul {
+    list-style: none; /* Видаляє маркери списку */
+    padding: 0; /* Видаляє зовнішні відступи */
+  }
+  .navbar li {
+    text-align: center; /* Вирівнює текст по центру */
+    margin-bottom: 10px; /* Додає відступ між пунктами меню */
+    position: relative; /* Встановлює позицію для зміщення ефекту наведення */
+  }
+  .navbar a {
+    display: block; /* Робить посилання блочними елементами */
+    padding: 10px; /* Додає внутрішні відступи */
+    text-decoration: none; /* Видаляє підкреслення посилань */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Плавна анімація зміни кольору фону та тексту */
+  }
+  .navbar li:hover a {
+    background-color: #ddd; /* Змінює колір фону при наведенні */
+    color: #333; /* Змінює колір тексту при наведенні */
+  }
+}
+@media only screen and (min-width: 638px) and (max-width: 768px) {
+  .navbar ul {
+    list-style: none; /* Видаляє маркери списку */
+    padding: 0; /* Видаляє зовнішні відступи */
+  }
+  .navbar li {
+    text-align: center; /* Вирівнює текст по центру */
+    margin-bottom: 10px; /* Додає відступ між пунктами меню */
+    position: relative; /* Встановлює позицію для зміщення ефекту наведення */
+  }
+  .navbar a {
+    display: block; /* Робить посилання блочними елементами */
+    padding: 10px; /* Додає внутрішні відступи */
+    text-decoration: none; /* Видаляє підкреслення посилань */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Плавна анімація зміни кольору фону та тексту */
+  }
+  .navbar li:hover a {
+    background-color: #ddd; /* Змінює колір фону при наведенні */
+    color: #333; /* Змінює колір тексту при наведенні */
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1064px) {
+  .navbar li {
+    width: 50%; /* Кожен елемент займає половину ширини рядка */
+    text-align: center; /* Вирівнює текст по центру */
+    box-sizing: border-box; /* Враховує внутрішні відступи та рамки в розрахунках ширини */
+    padding: 10px; /* Додає відступи */
+  }
+  .navbar a {
+    display: block; /* Робить посилання блочними елементами */
+    text-decoration: none; /* Видаляє підкреслення посилань */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Плавна анімація зміни кольору фону та тексту */
+    padding: 8px 0; /* Додає відступи зверху та знизу */
+  }
+  .navbar li:hover a {
+    background-color: #ddd; /* Змінює колір фону при наведенні */
+    color: #333; /* Змінює колір тексту при наведенні */
+  }
+}
 /* Стилі для навігації*/
 .navbar {
   background-color: #444; /* Змінено колір для відмінності */
@@ -44,9 +103,10 @@ h1, h2, h3, h4, h5, h6 {
   list-style: none;
   display: flex; /* Змінено на flex */
   justify-content: center; /* Вирівнюємо по центру */
+  align-items: center;
 }
 .navbar li {
-  display: inline; /*Розміщення елементів в рядок */
+  /* display: inline; */ /* Видалено, так як не потрібно при використанні flex */
   margin-right: 20px; /* Відступ між пунктами меню */
   transition: transform 0.3s ease; /* Анімація при наведенні миші */
 }
@@ -168,8 +228,10 @@ h1, h2, h3, h4, h5, h6 {
 /* Стилі для вбудованого розміщення CSS коду*/
 section img {
   max-width: 100%;
-  height: auto;
-  margin-bottom: 20px;
+  object-fit: contain;
+  margin: 0; /* Видалення відступів */
+  border: none; /* Видалення рамки */
+  max-height: 100vh; /* Обмеження висоти контейнера */
 }
 
 /* Стилі для footer*/
@@ -217,23 +279,12 @@ footer .social-icons a img:hover {
 }
 
 /* Додаткові стилі для зображень */
-.main-image {
-  display: block;
-  margin: 0 auto;
-}
-
-.hardware-image {
-  width: auto;
-  height: 300px;
-  display: block;
-  margin: 0 auto;
-}
-
-.computer-image {
-  width: auto;
-  height: 430px;
-  display: block;
-  margin: 0 auto;
+iframe {
+  width: 100%; /* Займає всю доступну ширину */
+  height: auto; /* Автоматична висота для збереження пропорцій */
+  display: block; /* Робить відео блоковим елементом */
+  margin: 0 auto; /* Центрує відео по горизонталі */
+  max-width: 100%; /* Зберігаємо відео в межах контейнера */
 }
 
 /*# sourceMappingURL=style.css.map */
