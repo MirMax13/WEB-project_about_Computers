@@ -42,11 +42,16 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
   margin: 0;
   list-style: none;
+  display: flex; /* Змінено на flex */
+  justify-content: center; /* Вирівнюємо по центру */
 }
 .navbar li {
-  display: inline; /* Розміщення елементів в рядок */
+  display: inline; /*Розміщення елементів в рядок */
   margin-right: 20px; /* Відступ між пунктами меню */
   transition: transform 0.3s ease; /* Анімація при наведенні миші */
+}
+.navbar li:last-child {
+  margin-right: 0; /* Відсутність відступу для останнього елементу */
 }
 .navbar li:hover {
   transform: translateY(-3px); /* Зміна положення при наведенні миші */
@@ -70,12 +75,13 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  flex-wrap: wrap; /* Додано можливість обгортання */
 }
 
 /* Стилі для селектора по id*/
 #content {
   max-width: 800px;
-  float: left;
+  /*float: left;*/
   width: 70%;
   background-color: #fff;
   padding: 20px;
@@ -105,6 +111,8 @@ h1, h2, h3, h4, h5, h6 {
   margin-left: 20px;
   line-height: 1.6;
   margin-bottom: 20px;
+  display: flex; /* Змінено на flex */
+  flex-direction: column; /* Змінено на вертикальну орієнтацію */
 }
 
 /* Стилі для заголовків списку*/
@@ -179,6 +187,8 @@ footer ul {
   list-style: none;
   padding: 0;
   margin-bottom: 20px;
+  display: flex; /* Змінено на flex */
+  justify-content: center; /* Центрування елементів */
 }
 footer ul li {
   display: inline;
