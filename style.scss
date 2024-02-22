@@ -475,31 +475,10 @@ iframe {
         ul {
             flex-direction: column;
             align-items: center;
-          }
-    }
-    footer{
-        .social-icons a img {
-            width: 30px;
-            height: 30px;
-          }
-        ul {
-            flex-direction: column;
-            align-items: center;
-          }
-        p {
-            margin-bottom: 9px;
-        }
-    }
-    #content {
-        width: 100%;
-      }
-    .navbar {
-        ul {
             list-style: none; /* Видаляє маркери списку */
             padding: 0; /* Видаляє зовнішні відступи */
-        }
-
-        li {
+          }
+          li {
             text-align: center; /* Вирівнює текст по центру */
             margin-bottom: 10px; /* Додає відступ між пунктами меню */
             position: relative; /* Встановлює позицію для зміщення ефекту наведення */
@@ -517,6 +496,22 @@ iframe {
             color: #333; /* Змінює колір тексту при наведенні */
         }
     }
+    footer{
+        .social-icons a img {
+            width: 30px;
+            height: 30px;
+          }
+        ul {
+            flex-direction: column;
+            align-items: center;
+          }
+        p {
+            margin-bottom: 9px;
+        }
+    }
+    #content {
+        width: 100%;
+      }
 }
 @media only screen and (min-width: 638px) and (max-width: 768px) {
     .navbar {
