@@ -25,6 +25,14 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Montserrat", sans-serif; /* Для заголовків використовуємо шрифт Montserrat. */
 }
 
+@media only screen and (max-width: 468px) {
+  body {
+    font-size: 19px;
+  }
+  h2 {
+    font-size: 23px;
+  }
+}
 @media only screen and (max-width: 638px) {
   .navbar ul {
     list-style: none; /* Видаляє маркери списку */
@@ -171,6 +179,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-left: 20px;
   line-height: 1.6;
   margin-bottom: 20px;
+  hyphens: manual; /* Дозволяє автоматичну розбивку слів на склади */
   display: flex; /* Змінено на flex */
   flex-direction: column; /* Змінено на вертикальну орієнтацію */
 }
@@ -220,7 +229,6 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Стилі для класу*/
 .content-paragraph {
-  font-size: 20px;
   line-height: 1.6;
   margin-bottom: 20px;
 }
@@ -229,9 +237,10 @@ h1, h2, h3, h4, h5, h6 {
 section img {
   max-width: 100%;
   object-fit: contain;
-  margin: 0; /* Видалення відступів */
+  margin: 0 auto; /* Видалення відступів */
   border: none; /* Видалення рамки */
   max-height: 100vh; /* Обмеження висоти контейнера */
+  display: block;
 }
 
 /* Стилі для footer*/
@@ -278,7 +287,6 @@ footer .social-icons a img:hover {
   transform: scale(1.1);
 }
 
-/* Додаткові стилі для зображень */
 iframe {
   width: 100%; /* Займає всю доступну ширину */
   height: auto; /* Автоматична висота для збереження пропорцій */
