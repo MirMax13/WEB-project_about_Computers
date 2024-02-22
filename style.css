@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /* Загальні стилі*/
 header {
+  font-size: 19px;
   background-color: #41b3b3; /* Колір фону */
   color: #fff; /* Колір тексту */
   padding: 20px; /* Відступи всередині header */
@@ -81,13 +82,18 @@ h1, h2, h3, h4, h5, h6 {
 /* Стилі для селектора по id*/
 #content {
   max-width: 800px;
-  /*float: left;*/
   width: 70%;
   background-color: #fff;
   padding: 20px;
   box-sizing: border-box;
   border: 1px solid #ddd;
   border-radius: 5px;
+  /* Стилі для списку*/
+  /* Стилі для заголовків списку*/
+  /* Стилі для таблиці*/
+  /* Стилі для заголовків таблиці*/
+  /* Стилі для комірок таблиці*/
+  /* Стилі для непарних рядків таблиці*/
 }
 #content h2 {
   color: #333; /* Колір тексту */
@@ -104,19 +110,14 @@ h1, h2, h3, h4, h5, h6 {
   height: 100%; /* Висота рівна висоті батьківського елемента */
   background-color: #666; /* Колір роздільної лінії */
 }
-
-/* Стилі для списку*/
 #content ul {
   list-style-type: disc;
-  margin-left: 0px;
   line-height: 1.6;
   margin-bottom: 20px;
   hyphens: manual; /* Дозволяє автоматичну розбивку слів на склади */
   display: flex; /* Змінено на flex */
   flex-direction: column; /* Змінено на вертикальну орієнтацію */
 }
-
-/* Стилі для заголовків списку*/
 #content h3 {
   color: #333; /* Колір тексту */
   font-size: 1.5rem; /* Розмір шрифту */
@@ -133,28 +134,20 @@ h1, h2, h3, h4, h5, h6 {
   height: 2px; /* Висота роздільної лінії */
   background-color: #666; /* Колір роздільної лінії */
 }
-
-/* Стилі для таблиці*/
 #content table {
   width: 100%;
   border-collapse: collapse;
 }
-
-/* Стилі для заголовків таблиці*/
 #content th {
   background-color: #333;
   color: #fff;
   padding: 10px;
   text-align: left;
 }
-
-/* Стилі для комірок таблиці*/
 #content td {
   border: 1px solid #ddd;
   padding: 10px;
 }
-
-/* Стилі для непарних рядків таблиці*/
 #content tr:nth-child(odd) {
   background-color: #f2f2f2;
 }
@@ -227,12 +220,68 @@ iframe {
   max-width: 100%; /* Зберігаємо відео в межах контейнера */
 }
 
-@media only screen and (max-width: 410px) {
-  body {
-    font-size: 18px;
+@media only screen and (min-width: 150px) and (max-width: 168px) {
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
   }
-  h2 {
-    font-size: 22px;
+  footer .social-icons a img {
+    width: 20px;
+    height: 20px;
+  }
+  footer ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer p {
+    margin-bottom: 5px;
+  }
+  .container {
+    margin-top: 10px;
+  }
+  header {
+    font-size: 12px;
+    padding: 5px; /* Відступи всередині header */
+  }
+  body {
+    font-size: 10px;
+  }
+  #content h2 {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+  #content h3 {
+    font-size: 0.8rem; /* Розмір шрифту */
+  }
+  #content ul {
+    margin-left: -30px;
+  }
+  /* Стилі для заголовків таблиці*/
+  #content th {
+    padding: 5px;
+  }
+  /* Стилі для комірок таблиці*/
+  #content td {
+    padding: 0px;
+  }
+}
+@media only screen and (min-width: 168px) and (max-width: 200px) {
+  header {
+    font-size: 12px;
+    padding: 5px; /* Відступи всередині header */
+  }
+  body {
+    font-size: 12px;
+  }
+  #content h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  #content h3 {
+    font-size: 1.1rem; /* Розмір шрифту */
+  }
+  #content ul {
+    margin-left: -30px;
   }
   /* Стилі для заголовків таблиці*/
   #content th {
@@ -243,7 +292,59 @@ iframe {
     padding: 5px;
   }
 }
-@media only screen and (max-width: 468px) {
+@media only screen and (min-width: 200px) and (max-width: 290px) {
+  header {
+    font-size: 13px;
+    padding: 5px; /* Відступи всередині header */
+  }
+  body {
+    font-size: 14px;
+  }
+  h2 {
+    font-size: 19px;
+  }
+  #content h3 {
+    font-size: 1.2rem; /* Розмір шрифту */
+  }
+  #content ul {
+    margin-left: -20px;
+  }
+  /* Стилі для заголовків таблиці*/
+  #content th {
+    padding: 5px;
+  }
+  /* Стилі для комірок таблиці*/
+  #content td {
+    padding: 5px;
+  }
+}
+@media only screen and (min-width: 290px) and (max-width: 410px) {
+  header {
+    font-size: 16px;
+  }
+  body {
+    font-size: 18px;
+  }
+  h2 {
+    font-size: 22px;
+  }
+  #content h3 {
+    font-size: 1.3rem; /* Розмір шрифту */
+  }
+  /* Стилі для заголовків таблиці*/
+  #content th {
+    padding: 5px;
+  }
+  /* Стилі для комірок таблиці*/
+  #content td {
+    padding: 5px;
+  }
+}
+@media only screen and (min-width: 410px) and (max-width: 468px) {
+  header {
+    font-size: 17px;
+    padding: 10px; /* Відступи всередині header */
+  }
   body {
     font-size: 19px;
   }
@@ -252,6 +353,9 @@ iframe {
   }
 }
 @media only screen and (max-width: 638px) {
+  #content {
+    width: 100%;
+  }
   .navbar ul {
     list-style: none; /* Видаляє маркери списку */
     padding: 0; /* Видаляє зовнішні відступи */
