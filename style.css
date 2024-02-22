@@ -214,7 +214,6 @@ footer .social-icons a img:hover {
 
 iframe {
   width: 100%; /* Займає всю доступну ширину */
-  height: auto; /* Автоматична висота для збереження пропорцій */
   display: block; /* Робить відео блоковим елементом */
   margin: 0 auto; /* Центрує відео по горизонталі */
   max-width: 100%; /* Зберігаємо відео в межах контейнера */
@@ -246,6 +245,11 @@ iframe {
   body {
     font-size: 10px;
   }
+  #content {
+    width: 100%;
+    /* Стилі для заголовків таблиці*/
+    /* Стилі для комірок таблиці*/
+  }
   #content h2 {
     font-size: 15px;
     margin-bottom: 10px;
@@ -256,11 +260,9 @@ iframe {
   #content ul {
     margin-left: -30px;
   }
-  /* Стилі для заголовків таблиці*/
   #content th {
     padding: 5px;
   }
-  /* Стилі для комірок таблиці*/
   #content td {
     padding: 0px;
   }
@@ -291,6 +293,11 @@ iframe {
   body {
     font-size: 11px;
   }
+  #content {
+    width: 100%;
+    /* Стилі для заголовків таблиці*/
+    /* Стилі для комірок таблиці*/
+  }
   #content h2 {
     font-size: 16px;
     margin-bottom: 10px;
@@ -301,11 +308,9 @@ iframe {
   #content ul {
     margin-left: -30px;
   }
-  /* Стилі для заголовків таблиці*/
   #content th {
     padding: 5px;
   }
-  /* Стилі для комірок таблиці*/
   #content td {
     padding: 1px;
   }
@@ -336,8 +341,14 @@ iframe {
   body {
     font-size: 14px;
   }
-  h2 {
+  #content {
+    width: 100%;
+    /* Стилі для заголовків таблиці*/
+    /* Стилі для комірок таблиці*/
+  }
+  #content h2 {
     font-size: 19px;
+    margin-bottom: 10px;
   }
   #content h3 {
     font-size: 1.2rem; /* Розмір шрифту */
@@ -345,11 +356,9 @@ iframe {
   #content ul {
     margin-left: -20px;
   }
-  /* Стилі для заголовків таблиці*/
   #content th {
     padding: 5px;
   }
-  /* Стилі для комірок таблиці*/
   #content td {
     padding: 1px;
   }
@@ -376,17 +385,21 @@ iframe {
   body {
     font-size: 18px;
   }
-  h2 {
+  #content {
+    width: 100%;
+    /* Стилі для заголовків таблиці*/
+    /* Стилі для комірок таблиці*/
+  }
+  #content h2 {
     font-size: 22px;
+    margin-bottom: 10px;
   }
   #content h3 {
     font-size: 1.3rem; /* Розмір шрифту */
   }
-  /* Стилі для заголовків таблиці*/
   #content th {
     padding: 5px;
   }
-  /* Стилі для комірок таблиці*/
   #content td {
     padding: 5px;
   }
@@ -414,7 +427,10 @@ iframe {
   body {
     font-size: 19px;
   }
-  h2 {
+  #content {
+    width: 100%;
+  }
+  #content h2 {
     font-size: 23px;
   }
 }

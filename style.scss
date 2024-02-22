@@ -238,9 +238,15 @@ footer {
     }
 }
 
+// iframe {
+//     width: 100%; /* Займає всю доступну ширину */
+//     display: block; /* Робить відео блоковим елементом */
+//     margin: 0 auto; /* Центрує відео по горизонталі */
+//     max-width: 100%; /* Зберігаємо відео в межах контейнера */
+// }
+
 iframe {
     width: 100%; /* Займає всю доступну ширину */
-    height: auto; /* Автоматична висота для збереження пропорцій */
     display: block; /* Робить відео блоковим елементом */
     margin: 0 auto; /* Центрує відео по горизонталі */
     max-width: 100%; /* Зберігаємо відео в межах контейнера */
@@ -276,24 +282,28 @@ iframe {
     body {
         font-size: 10px;
     }
-    #content h2 {
-        font-size: 15px;
-        margin-bottom: 10px;
+    #content{
+        width: 100%;
+        h2 {
+            font-size: 15px;
+            margin-bottom: 10px;
+        }
+        h3 {
+            font-size: 0.8rem; /* Розмір шрифту */
+        }
+        ul{
+            margin-left: -30px;
+        }
+        /* Стилі для заголовків таблиці*/
+        th { 
+            padding: 5px;
+        }
+        /* Стилі для комірок таблиці*/
+        td {
+            padding: 0px;
+        }
     }
-    #content h3 {
-        font-size: 0.8rem; /* Розмір шрифту */
-    }
-    #content ul{
-        margin-left: -30px;
-    }
-    /* Стилі для заголовків таблиці*/
-    #content th { 
-        padding: 5px;
-    }
-    /* Стилі для комірок таблиці*/
-    #content td {
-        padding: 0px;
-    }
+    
 
   }
 @media only screen and (min-width: 168px) and (max-width: 200px) {
@@ -326,25 +336,27 @@ iframe {
     body {
         font-size: 11px;
     }
-    #content h2 {
+    #content{
+        width: 100%;
+        h2 {
         font-size: 16px;
         margin-bottom: 10px;
+        }
+        h3 {
+            font-size: 0.9rem; /* Розмір шрифту */
+        }
+        ul{
+            margin-left: -30px;
+        }
+        /* Стилі для заголовків таблиці*/
+        th { 
+            padding: 5px;
+        }
+        /* Стилі для комірок таблиці*/
+        td {
+            padding: 1px;
+        }
     }
-    #content h3 {
-        font-size: 0.9rem; /* Розмір шрифту */
-    }
-    #content ul{
-        margin-left: -30px;
-    }
-    /* Стилі для заголовків таблиці*/
-    #content th { 
-        padding: 5px;
-    }
-    /* Стилі для комірок таблиці*/
-    #content td {
-        padding: 1px;
-    }
-
   }
 
 @media only screen and (min-width: 200px) and (max-width: 290px) {
@@ -377,24 +389,27 @@ iframe {
     body {
         font-size: 14px;
     }
-    h2 {
+    #content{
+        width: 100%;
+        h2 {
         font-size: 19px;
+        margin-bottom: 10px;
+        }
+        h3 {
+            font-size: 1.2rem; /* Розмір шрифту */
+        }
+        ul{
+            margin-left: -20px;
+        }
+        /* Стилі для заголовків таблиці*/
+        th { 
+            padding: 5px;
+        }
+        /* Стилі для комірок таблиці*/
+        td {
+            padding: 1px;
+        }
     }
-    #content h3 {
-        font-size: 1.2rem; /* Розмір шрифту */
-    }
-    #content ul{
-        margin-left: -20px;
-    }
-    /* Стилі для заголовків таблиці*/
-    #content th { 
-        padding: 5px;
-    }
-    /* Стилі для комірок таблиці*/
-    #content td {
-        padding: 1px;
-    }
-
   }
 @media only screen and (min-width: 290px) and (max-width: 410px) {
     .navbar {
@@ -422,21 +437,24 @@ iframe {
     body {
         font-size: 18px;
     }
-    h2 {
+    #content{
+        width: 100%;
+        h2 {
         font-size: 22px;
+        margin-bottom: 10px;
+        }
+        h3 {
+            font-size: 1.3rem; /* Розмір шрифту */
+        }
+        /* Стилі для заголовків таблиці*/
+        th { 
+            padding: 5px;
+        }
+        /* Стилі для комірок таблиці*/
+        td {
+            padding: 5px;
+        }
     }
-    #content h3 {
-        font-size: 1.3rem; /* Розмір шрифту */
-    }
-    /* Стилі для заголовків таблиці*/
-    #content th { 
-        padding: 5px;
-    }
-    /* Стилі для комірок таблиці*/
-    #content td {
-        padding: 5px;
-    }
-
   }
 @media only screen and (min-width: 410px)and (max-width: 468px) {
     .navbar {
@@ -465,8 +483,11 @@ iframe {
     body {
         font-size: 19px;
     }
-    h2 {
+    #content{
+        width: 100%;
+        h2 {
         font-size: 23px;
+        }
     }
   }
 @media only screen and (min-width: 468px) and (max-width: 638px) {
