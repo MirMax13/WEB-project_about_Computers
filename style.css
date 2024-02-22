@@ -33,11 +33,6 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Додавання тіні */
 }
-.navbar h2 {
-  color: white;
-  margin: 0;
-  padding: 0;
-}
 .navbar ul {
   padding: 0;
   margin: 0;
@@ -183,7 +178,7 @@ footer ul {
   list-style: none;
   padding: 0;
   margin-bottom: 20px;
-  display: flex; /* Змінено на flex */
+  display: flex;
   justify-content: center; /* Центрування елементів */
 }
 footer ul li {
@@ -216,7 +211,7 @@ iframe {
   width: 100%; /* Займає всю доступну ширину */
   display: block; /* Робить відео блоковим елементом */
   margin: 0 auto; /* Центрує відео по горизонталі */
-  max-width: 100%; /* Зберігаємо відео в межах контейнера */
+  max-width: 100%;
 }
 
 @media only screen and (min-width: 150px) and (max-width: 168px) {
@@ -255,7 +250,7 @@ iframe {
     margin-bottom: 10px;
   }
   #content h3 {
-    font-size: 0.8rem; /* Розмір шрифту */
+    font-size: 0.8rem;
   }
   #content ul {
     margin-left: -30px;
@@ -447,6 +442,7 @@ iframe {
     position: relative; /* Встановлює позицію для зміщення ефекту наведення */
   }
   .navbar a {
+    width: 100%; /* Займає всю ширину */
     display: block; /* Робить посилання блочними елементами */
     padding: 10px; /* Додає внутрішні відступи */
     text-decoration: none; /* Видаляє підкреслення посилань */
