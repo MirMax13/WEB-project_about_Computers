@@ -240,7 +240,7 @@ iframe {
     margin-top: 10px;
   }
   header {
-    font-size: 12px;
+    font-size: 9px;
     padding: 5px; /* Відступи всередині header */
   }
   body {
@@ -266,19 +266,37 @@ iframe {
   }
 }
 @media only screen and (min-width: 168px) and (max-width: 200px) {
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .social-icons a img {
+    width: 22px;
+    height: 22px;
+  }
+  footer ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer p {
+    margin-bottom: 6px;
+  }
+  .container {
+    margin-top: 10px;
+  }
   header {
-    font-size: 12px;
+    font-size: 10px;
     padding: 5px; /* Відступи всередині header */
   }
   body {
-    font-size: 12px;
+    font-size: 11px;
   }
   #content h2 {
     font-size: 16px;
     margin-bottom: 10px;
   }
   #content h3 {
-    font-size: 1.1rem; /* Розмір шрифту */
+    font-size: 0.9rem; /* Розмір шрифту */
   }
   #content ul {
     margin-left: -30px;
@@ -289,10 +307,28 @@ iframe {
   }
   /* Стилі для комірок таблиці*/
   #content td {
-    padding: 5px;
+    padding: 1px;
   }
 }
 @media only screen and (min-width: 200px) and (max-width: 290px) {
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .social-icons a img {
+    width: 24px;
+    height: 24px;
+  }
+  footer ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer p {
+    margin-bottom: 6px;
+  }
+  .container {
+    margin-top: 10px;
+  }
   header {
     font-size: 13px;
     padding: 5px; /* Відступи всередині header */
@@ -315,10 +351,25 @@ iframe {
   }
   /* Стилі для комірок таблиці*/
   #content td {
-    padding: 5px;
+    padding: 1px;
   }
 }
 @media only screen and (min-width: 290px) and (max-width: 410px) {
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .social-icons a img {
+    width: 26px;
+    height: 26px;
+  }
+  footer ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer p {
+    margin-bottom: 7px;
+  }
   header {
     font-size: 16px;
   }
@@ -341,6 +392,21 @@ iframe {
   }
 }
 @media only screen and (min-width: 410px) and (max-width: 468px) {
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .social-icons a img {
+    width: 28px;
+    height: 28px;
+  }
+  footer ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer p {
+    margin-bottom: 8px;
+  }
   header {
     font-size: 17px;
     padding: 10px; /* Відступи всередині header */
@@ -352,7 +418,22 @@ iframe {
     font-size: 23px;
   }
 }
-@media only screen and (max-width: 638px) {
+@media only screen and (min-width: 468px) and (max-width: 638px) {
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .social-icons a img {
+    width: 30px;
+    height: 30px;
+  }
+  footer ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer p {
+    margin-bottom: 9px;
+  }
   #content {
     width: 100%;
   }
