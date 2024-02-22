@@ -65,6 +65,46 @@ h1, h2, h3, h4, h5, h6 {
   border-color: #555;
 }
 
+.navbar2 {
+  background-color: #444;
+  padding: 10px;
+  text-align: center;
+  display: none;
+  transition: background-color 0.3s ease;
+}
+
+.menu-item {
+  position: relative;
+  display: inline-block;
+}
+.menu-item a {
+  color: white;
+  text-decoration: none;
+  padding: 0px 20px;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+.menu-item a:hover {
+  color: #41b3b3;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  z-index: 1;
+}
+.submenu a {
+  color: white;
+  padding: 10px;
+  display: block;
+  text-decoration: none;
+}
+
+.menu-item:hover .submenu {
+  display: block;
+}
+
 /* Стилі для контейнера*/
 .container {
   margin-top: 50px; /* Відступ зверху, щоб не перекривати навігацію */
@@ -215,9 +255,12 @@ iframe {
 }
 
 @media only screen and (min-width: 150px) and (max-width: 168px) {
-  .navbar ul {
-    flex-direction: column;
-    align-items: center;
+  .navbar {
+    display: none; /* Приховуємо список пунктів меню */
+  }
+  .navbar2 {
+    display: block;
+    padding: 10px;
   }
   footer .social-icons a img {
     width: 20px;
@@ -263,9 +306,11 @@ iframe {
   }
 }
 @media only screen and (min-width: 168px) and (max-width: 200px) {
-  .navbar ul {
-    flex-direction: column;
-    align-items: center;
+  .navbar {
+    display: none; /* Приховуємо список пунктів меню */
+  }
+  .navbar2 {
+    display: block;
   }
   footer .social-icons a img {
     width: 22px;
@@ -311,9 +356,11 @@ iframe {
   }
 }
 @media only screen and (min-width: 200px) and (max-width: 290px) {
-  .navbar ul {
-    flex-direction: column;
-    align-items: center;
+  .navbar {
+    display: none; /* Приховуємо список пунктів меню */
+  }
+  .navbar2 {
+    display: block;
   }
   footer .social-icons a img {
     width: 24px;
@@ -359,9 +406,11 @@ iframe {
   }
 }
 @media only screen and (min-width: 290px) and (max-width: 410px) {
-  .navbar ul {
-    flex-direction: column;
-    align-items: center;
+  .navbar {
+    display: none; /* Приховуємо список пунктів меню */
+  }
+  .navbar2 {
+    display: block;
   }
   footer .social-icons a img {
     width: 26px;
@@ -400,9 +449,11 @@ iframe {
   }
 }
 @media only screen and (min-width: 410px) and (max-width: 468px) {
-  .navbar ul {
-    flex-direction: column;
-    align-items: center;
+  .navbar {
+    display: none; /* Приховуємо список пунктів меню */
+  }
+  .navbar2 {
+    display: block;
   }
   footer .social-icons a img {
     width: 28px;
@@ -430,27 +481,11 @@ iframe {
   }
 }
 @media only screen and (min-width: 468px) and (max-width: 638px) {
-  .navbar ul {
-    flex-direction: column;
-    align-items: center;
-    list-style: none; /* Видаляє маркери списку */
-    padding: 0; /* Видаляє зовнішні відступи */
+  .navbar {
+    display: none; /* Приховуємо список пунктів меню */
   }
-  .navbar li {
-    text-align: center; /* Вирівнює текст по центру */
-    margin-bottom: 10px; /* Додає відступ між пунктами меню */
-    position: relative; /* Встановлює позицію для зміщення ефекту наведення */
-  }
-  .navbar a {
-    width: 100%; /* Займає всю ширину */
-    display: block; /* Робить посилання блочними елементами */
-    padding: 10px; /* Додає внутрішні відступи */
-    text-decoration: none; /* Видаляє підкреслення посилань */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Плавна анімація зміни кольору фону та тексту */
-  }
-  .navbar li:hover a {
-    background-color: #ddd; /* Змінює колір фону при наведенні */
-    color: #333; /* Змінює колір тексту при наведенні */
+  .navbar2 {
+    display: block;
   }
   footer .social-icons a img {
     width: 30px;
@@ -468,6 +503,9 @@ iframe {
   }
 }
 @media only screen and (min-width: 638px) and (max-width: 768px) {
+  .navbar {
+    display: block;
+  }
   .navbar ul {
     list-style: none; /* Видаляє маркери списку */
     padding: 0; /* Видаляє зовнішні відступи */
@@ -487,8 +525,14 @@ iframe {
     background-color: #ddd; /* Змінює колір фону при наведенні */
     color: #333; /* Змінює колір тексту при наведенні */
   }
+  .navbar2 {
+    display: none;
+  }
 }
 @media only screen and (min-width: 768px) and (max-width: 1064px) {
+  .navbar {
+    display: block;
+  }
   .navbar li {
     width: 50%; /* Кожен елемент займає половину ширини рядка */
     text-align: center; /* Вирівнює текст по центру */
@@ -504,6 +548,9 @@ iframe {
   .navbar li:hover a {
     background-color: #ddd; /* Змінює колір фону при наведенні */
     color: #333; /* Змінює колір тексту при наведенні */
+  }
+  .navbar2 {
+    display: none;
   }
 }
 
