@@ -22,7 +22,7 @@ body {
   background-attachment: fixed;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4 {
   font-family: "Montserrat", sans-serif; /* Для заголовків використовуємо шрифт Montserrat. */
 }
 
@@ -186,7 +186,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Стилі для класу*/
-.content-paragraph {
+p {
   line-height: 1.6;
   margin-bottom: 20px;
 }
