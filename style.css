@@ -26,7 +26,6 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Montserrat", sans-serif; /* Для заголовків використовуємо шрифт Montserrat. */
 }
 
-/* Стилі для навігації*/
 .navbar {
   background-color: #444; /* Змінено колір для відмінності */
   padding: 10px 0;
@@ -108,9 +107,8 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
 }
 
-/* Стилі для контейнера*/
 .container {
-  margin-top: 50px; /* Відступ зверху, щоб не перекривати навігацію */
+  margin-top: 50px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -126,51 +124,48 @@ h1, h2, h3, h4, h5, h6 {
   box-sizing: border-box;
   border: 1px solid #ddd;
   border-radius: 5px;
-  /* Стилі для списку*/
-  /* Стилі для заголовків списку*/
-  /* Стилі для таблиці*/
   /* Стилі для заголовків таблиці*/
   /* Стилі для комірок таблиці*/
   /* Стилі для непарних рядків таблиці*/
 }
 #content h2 {
-  color: #333; /* Колір тексту */
-  font-size: 24px; /* Розмір шрифту */
-  margin-bottom: 20px; /* Відступ знизу */
-  position: relative; /* Додати позицію для псевдоелемента */
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+  position: relative; /* Позиція для псевдоелемента */
 }
 #content h2::before {
-  content: ""; /* Додати контент псевдоелемента */
-  position: absolute; /* Зафіксувати позицію псевдоелемента */
+  content: ""; /* Контент псевдоелемента */
+  position: absolute; /* Фіксування позиції псевдоелемента */
   top: 0; /* Початок зверху */
-  left: -20px; /* Зміщення вліво */
+  left: -20px;
   width: 10px; /* Ширина лінії */
   height: 100%; /* Висота рівна висоті батьківського елемента */
-  background-color: #666; /* Колір роздільної лінії */
+  background-color: #666;
 }
 #content ul {
   list-style-type: disc;
   line-height: 1.6;
   margin-bottom: 20px;
-  hyphens: manual; /* Дозволяє автоматичну розбивку слів на склади */
+  hyphens: manual;
   display: flex; /* Змінено на flex */
   flex-direction: column; /* Змінено на вертикальну орієнтацію */
 }
 #content h3 {
-  color: #333; /* Колір тексту */
-  font-size: 1.5rem; /* Розмір шрифту */
+  color: #333;
+  font-size: 1.5rem;
   margin-top: 15px;
-  padding-bottom: 5px; /* Додати відступ від розділювальної лінії */
-  position: relative; /* Додати позицію для псевдоелемента */
+  padding-bottom: 5px;
+  position: relative; /* Позиція для псевдоелемента */
 }
 #content h3::after {
-  content: ""; /* Додати контент псевдоелементу */
-  position: absolute; /* Зафіксувати позицію псевдоелемента */
+  content: ""; /* Контент псевдоелемента */
+  position: absolute; /* Фіксування позиції псевдоелемента */
   bottom: 0; /* Позиціонувати внизу */
   left: 0; /* Почати зліва */
   width: 50px; /* Ширина роздільної лінії */
-  height: 2px; /* Висота роздільної лінії */
-  background-color: #666; /* Колір роздільної лінії */
+  height: 2px;
+  background-color: #666;
 }
 #content table {
   width: 100%;
@@ -196,7 +191,6 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 20px;
 }
 
-/* Стилі для вбудованого розміщення CSS коду*/
 section img {
   max-width: 100%;
   object-fit: contain;
@@ -206,7 +200,6 @@ section img {
   display: block;
 }
 
-/* Стилі для footer*/
 footer {
   background-color: #333;
   color: #fff;
@@ -251,7 +244,7 @@ footer .social-icons a img:hover {
 }
 
 iframe {
-  width: 100%; /* Займає всю доступну ширину */
+  width: 100%;
   display: block; /* Робить відео блоковим елементом */
   margin: 0 auto; /* Центрує відео по горизонталі */
   max-width: 100%;
