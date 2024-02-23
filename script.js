@@ -13,3 +13,20 @@ window.addEventListener('DOMContentLoaded', function() {
       console.error('iframe element not found');
     }
   });
+
+  window.addEventListener('DOMContentLoaded', function() {
+    const menuItems = document.querySelectorAll('.menu-item a');
+  
+    function resizeMenuItems() {
+      const screenWidth = window.innerWidth;
+      const width = Math.max(5, screenWidth);
+  
+      for (const menuItem of menuItems) {
+        menuItem.style.width = `${width*0.889}px`;
+      }
+    }
+  
+    window.addEventListener('resize', resizeMenuItems);
+  
+    resizeMenuItems();
+  });
