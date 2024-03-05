@@ -54,17 +54,16 @@ h1, h2, h3, h4 {
         align-items: center;
         display: flex; /* Display links horizontally by default */
         position: absolute; /* Якщо забрати буде біля лого меню, але накладатимуться на інші елменти при меншій ширині*/
-        //top: 100%; /* Якщо забрати буде на місці лого меню */
         left: 0;
         background-color: #333; /* Match the navbar background */
         width: 100%; /* Take full width */
         li {
-            margin-right: 20px;
+            margin-right: 1em;
             width: 100%;
             a {
                 text-decoration: none;
                 color: white;
-                padding: 5px 10px;
+                padding: 0.25em 0.5em;
                 border: 1px solid transparent;
                 transition: border-color 0.3s ease;
                 display: inline-block; /* Display links as inline-block elements */
@@ -84,7 +83,7 @@ h1, h2, h3, h4 {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    flex-wrap: wrap; /* Додано можливість обгортання */
+    flex-wrap: wrap; /* Можливість обгортання */
 }
 /* Стилі для селектора по id*/
 #content {
@@ -117,7 +116,7 @@ h1, h2, h3, h4 {
         margin-bottom: 1em;
         hyphens: manual;
         display: flex; /* Змінено на flex */
-        flex-direction: column; /* Змінено на вертикальну орієнтацію */
+        flex-direction: column; /* Вертикальна орієнтація */
     }
     h3 { 
         color: #333; 

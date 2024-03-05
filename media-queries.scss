@@ -31,39 +31,16 @@
           }
     }
     .navbar {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        background-color: #333;
-        padding: 10px 20px;
-        .menu-btn {
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
         .nav-links {
             text-align: left;
-            list-style: none;
-            padding: 0;
-            margin: 0;
             display: none;
             top: 100%;
             z-index: 1;
             li {
                 display: block;
-                margin-bottom: 10px; /* Add some spacing between each link */
+                margin-bottom: 0.5em; /* Add some spacing between each link */
                 a {
-                    text-decoration: none;
-                    color: white;
-                    padding: 5px 10px;
-                    border: 1px solid transparent;
-                    transition: border-color 0.3s ease;
                     display: block; /* Display links as block elements */
-                }
-                a:hover {
-                    border-color: white;
                 }
             }
         }

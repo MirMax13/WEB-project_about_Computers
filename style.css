@@ -66,12 +66,12 @@ h1, h2, h3, h4 {
     width: 100%;
     /* Take full width */ }
     .navbar .nav-links li {
-      margin-right: 20px;
+      margin-right: 1em;
       width: 100%; }
       .navbar .nav-links li a {
         text-decoration: none;
         color: white;
-        padding: 5px 10px;
+        padding: 0.25em 0.5em;
         border: 1px solid transparent;
         transition: border-color 0.3s ease;
         display: inline-block;
@@ -88,7 +88,7 @@ h1, h2, h3, h4 {
   justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
-  /* Додано можливість обгортання */ }
+  /* Можливість обгортання */ }
 
 /* Стилі для селектора по id*/
 #content {
@@ -129,7 +129,7 @@ h1, h2, h3, h4 {
     display: flex;
     /* Змінено на flex */
     flex-direction: column;
-    /* Змінено на вертикальну орієнтацію */ }
+    /* Вертикальна орієнтація */ }
   #content h3 {
     color: #333;
     margin-top: 1em;
