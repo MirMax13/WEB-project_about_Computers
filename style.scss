@@ -36,57 +36,49 @@ h1, h2, h3, h4 {
     justify-content: space-between;
     background-color: #333;
     padding: 10px 20px;
+    .menu-btn {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.5rem;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+    .menu-btn:hover {
+        transform: scale(1.4); /* Збільшуємо розмір кнопки при наведенні */
+        background-color: rgba(255, 255, 255, 0.1); /* Змінюємо колір фону при наведенні */
+    }
+    .nav-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        align-items: center;
+        display: flex; /* Display links horizontally by default */
+        position: absolute; /* Якщо забрати буде біля лого меню, але накладатимуться на інші елменти при меншій ширині*/
+        //top: 100%; /* Якщо забрати буде на місці лого меню */
+        left: 0;
+        background-color: #333; /* Match the navbar background */
+        width: 100%; /* Take full width */
+        li {
+            margin-right: 20px;
+            width: 100%;
+            a {
+                text-decoration: none;
+                color: white;
+                padding: 5px 10px;
+                border: 1px solid transparent;
+                transition: border-color 0.3s ease;
+                display: inline-block; /* Display links as inline-block elements */
+            }
+            a:hover {
+                border-color: white;
+            }
+        }
+        li:last-child {
+            margin-right: 0; /* Remove margin from the last link */
+        }
+    }
   }
   
-.navbar .menu-btn {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1.5rem;
-    transition: transform 0.3s ease, background-color 0.3s ease; /* Додана анімація для зміни розміру та прозорості */
-}
-
-.navbar .menu-btn:hover {
-  transform: scale(1.4); /* Збільшуємо розмір кнопки при наведенні */
-  background-color: rgba(255, 255, 255, 0.1); /* Змінюємо колір фону при наведенні */
-}
-  
-  
-  .navbar .nav-links {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    align-items: center;
-    display: flex; /* Display links horizontally by default */
-    position: absolute; /* Якщо забрати буде біля лого меню, але накладатимуться на інші елменти при меншій ширині*/
-    //top: 100%; /* Якщо забрати буде на місці лого меню */
-    left: 0;
-    background-color: #333; /* Match the navbar background */
-    width: 100%; /* Take full width */
-}
-  
-  .navbar .nav-links li {
-    margin-right: 20px;
-    width: 100%;
-  }
-  
-  .navbar .nav-links li:last-child {
-    margin-right: 0; /* Remove margin from the last link */
-  }
-  
-  .navbar .nav-links li a {
-    text-decoration: none;
-    color: white;
-    padding: 5px 10px;
-    border: 1px solid transparent;
-    transition: border-color 0.3s ease;
-    display: inline-block; /* Display links as inline-block elements */
-    
-}
-  
-  .navbar .nav-links li a:hover {
-    border-color: white;
-  }
   
 
 .container {
@@ -464,47 +456,41 @@ iframe {
         justify-content: space-between;
         background-color: #333;
         padding: 10px 20px;
-      }
-      
-      .navbar .menu-btn {
-        background: none;
-        border: none;
-        color: white;
-        font-size: 1.5rem;
-        cursor: pointer;
-      }
-      
-      .navbar .nav-links {
-        text-align: left;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: none;
-        top: 100%;
-        z-index: 1;
-      }
-      
-      .navbar .nav-links li {
-        display: block;
-        margin-bottom: 10px; /* Add some spacing between each link */
-      }
-      
-      .navbar .nav-links li a {
-        text-decoration: none;
-        color: white;
-        padding: 5px 10px;
-        border: 1px solid transparent;
-        transition: border-color 0.3s ease;
-        display: block; /* Display links as block elements */
-      }
-      
-      .navbar .nav-links li a:hover {
-        border-color: white;
-      }
-    
-      .navbar .show {
-        display: block; /* Show the dropdown menu */
-      }
+        .menu-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        .nav-links {
+            text-align: left;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: none;
+            top: 100%;
+            z-index: 1;
+            li {
+                display: block;
+                margin-bottom: 10px; /* Add some spacing between each link */
+                a {
+                    text-decoration: none;
+                    color: white;
+                    padding: 5px 10px;
+                    border: 1px solid transparent;
+                    transition: border-color 0.3s ease;
+                    display: block; /* Display links as block elements */
+                }
+                a:hover {
+                    border-color: white;
+                }
+            }
+        }
+        .show {
+            display: block; /* Show the dropdown menu */
+        }
+      } 
 }
 
  
