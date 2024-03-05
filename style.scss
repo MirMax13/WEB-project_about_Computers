@@ -28,89 +28,65 @@ h1, h2, h3, h4 {
 }
 
 .navbar {
-    background-color: #444; /* Змінено колір для відмінності */
-    padding: 10px 0;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Додавання тіні */
-    ul {
-        padding: 0;
-        margin: 0;
-        list-style: none;
-        display: flex; /* Змінено на flex */
-        justify-content: center; /* Вирівнюємо по центру */
-        align-items: center;
-    }
-    li {
-        /* display: inline; */ /* Видалено, так як не потрібно при використанні flex */
-        margin-right: 20px; /* Відступ між пунктами меню */
-        transition: transform 0.3s ease; /* Анімація при наведенні миші */
-        
-        &:last-child {
-            margin-right: 0; /* Відсутність відступу для останнього елементу */
-        }
-        
-        &:hover {
-            transform: translateY(-3px); /* Зміна положення при наведенні миші */
-        }
-    }  
-    a {
-        color: white;
-        text-decoration: none;
-        padding: 8px 16px;
-        border-radius: 4px;
-        border: 1px solid transparent;
-        transition: background-color 0.3s ease, border-color 0.3s ease;
-        
-        &:hover {
-            background-color: #ddd;
-            border-color: #555;
-        }
-    }
-}
-
-.navbar2 {
-    background-color: #444;
-    padding-top: 5px;
-    padding-bottom: 7px;
-    text-align: center;
-    display: none;
-    transition: background-color 0.3s ease;
-}
-  
-.menu-item {
     position: relative;
-    display: inline-block;
-    a {
-        color: white;
-        text-decoration: none;
-        display: inline-block;
-        transition: color 0.3s ease;
-      
-        &:hover {
-         color: #41b3b3;
-            }
-        }
-}
-  
-.submenu {
-    display: none;
-    position: absolute;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
     background-color: #333;
-    z-index: 1;
-    box-sizing: border-box;
-    a {
-        color: white;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        display: block;
-        text-decoration: none;
-        box-sizing: border-box;
-      }
+    padding: 10px 20px;
+  }
+  
+.navbar .menu-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Додана анімація для зміни розміру та прозорості */
 }
 
-.menu-item:hover .submenu {
-    display: block;
+.navbar .menu-btn:hover {
+  transform: scale(1.4); /* Збільшуємо розмір кнопки при наведенні */
+  background-color: rgba(255, 255, 255, 0.1); /* Змінюємо колір фону при наведенні */
 }
+  
+  
+  .navbar .nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    display: flex; /* Display links horizontally by default */
+    position: absolute; /* Якщо забрати буде біля лого меню, але накладатимуться на інші елменти при меншій ширині*/
+    //top: 100%; /* Якщо забрати буде на місці лого меню */
+    left: 0;
+    background-color: #333; /* Match the navbar background */
+    width: 100%; /* Take full width */
+}
+  
+  .navbar .nav-links li {
+    margin-right: 20px;
+    width: 100%;
+  }
+  
+  .navbar .nav-links li:last-child {
+    margin-right: 0; /* Remove margin from the last link */
+  }
+  
+  .navbar .nav-links li a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+    border: 1px solid transparent;
+    transition: border-color 0.3s ease;
+    display: inline-block; /* Display links as inline-block elements */
+    
+}
+  
+  .navbar .nav-links li a:hover {
+    border-color: white;
+  }
+  
 
 .container {
     margin-top: 50px;
@@ -260,18 +236,6 @@ iframe {
     max-width: 100%;
 }
 @media only screen and (min-width: 100px) and (max-width: 150px) {
-    .navbar {
-        display: none; /* Приховуємо список пунктів меню */
-      }
-      .navbar2{
-          display: block;
-      }
-      .submenu {   
-        a {
-            padding-top: 5px;
-            padding-bottom: 5px;
-          }
-      }
       footer{
         padding-left: 20px;
         .social-icons a img {
@@ -323,18 +287,6 @@ iframe {
     }
 }
 @media only screen and (min-width: 150px) and (max-width: 168px) {
-    .navbar {
-        display: none; /* Приховуємо список пунктів меню */
-      }
-      .navbar2{
-          display: block;
-      }
-      .submenu {   
-        a {
-            padding-top: 6px;
-            padding-bottom: 6px;
-          }
-      }
     footer{
         .social-icons a img {
             width: 20px;
@@ -383,18 +335,6 @@ iframe {
     }
 }
 @media only screen and (min-width: 168px) and (max-width: 200px) {
-    .navbar{
-        display: none; /* Приховуємо список пунктів меню */
-      }
-      .navbar2{
-          display: block;
-      }
-      .submenu {   
-        a {
-            padding-top: 6px;
-            padding-bottom: 6px;
-          }
-      }
     footer{
         .social-icons a img {
             width: 22px;
@@ -442,18 +382,6 @@ iframe {
     }
 }
 @media only screen and (min-width: 200px) and (max-width: 290px) {
-    .navbar{
-        display: none; /* Приховуємо список пунктів меню */
-      }
-      .navbar2{
-          display: block;
-      }
-      .submenu {   
-        a {
-            padding-top: 7px;
-            padding-bottom: 7px;
-          }
-      }
     footer{
         .social-icons a img {
             width: 24px;
@@ -501,18 +429,6 @@ iframe {
     }
 }
 @media only screen and (min-width: 290px) and (max-width: 410px) {
-    .navbar{
-        display: none; /* Приховуємо список пунктів меню */
-      }
-      .navbar2{
-          display: block;
-      }
-      .submenu {   
-        a {
-            padding-top: 8px;
-            padding-bottom: 8px;
-          }
-      }
     footer{
         .social-icons a img {
             width: 26px;
@@ -556,12 +472,6 @@ iframe {
     }
 }
 @media only screen and (min-width: 410px)and (max-width: 468px) {
-    .navbar{
-        display: none; /* Приховуємо список пунктів меню */
-      }
-      .navbar2{
-          display: block;
-      }
     footer{
         .social-icons a img {
             width: 28px;
@@ -594,12 +504,6 @@ iframe {
     }
 }
 @media only screen and (min-width: 468px) and (max-width: 638px) {
-    .navbar{
-        display: none; /* Приховуємо список пунктів меню */
-      }
-      .navbar2{
-          display: block;
-      }
     footer{
         .social-icons a img {
             width: 30px;
@@ -621,60 +525,54 @@ iframe {
         width: 100%;
       }
 }
-@media only screen and (min-width: 638px) and (max-width: 768px) {
+@media only screen and (max-width: 638px) {
     .navbar {
-        display: block;
-        ul {
-            list-style: none; /* Видаляє маркери списку */
-            padding: 0; /* Видаляє зовнішні відступи */
-        }
-
-        li {
-            text-align: center; /* Вирівнює текст по центру */
-            margin-bottom: 10px; /* Додає відступ між пунктами меню */
-            position: relative; /* Встановлює позицію для зміщення ефекту наведення */
-        }
-
-        a {
-            display: block; /* Робить посилання блочними елементами */
-            padding: 10px; /* Додає внутрішні відступи */
-            text-decoration: none; /* Видаляє підкреслення посилань */
-            transition: background-color 0.3s ease, color 0.3s ease; /* Плавна анімація зміни кольору фону та тексту */
-        }
-
-        li:hover a {
-            background-color: #ddd; /* Змінює колір фону при наведенні */
-            color: #333; /* Змінює колір тексту при наведенні */
-        }
-    }
- 
-      .navbar2{
-          display: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #333;
+        padding: 10px 20px;
       }
-}
-@media only screen and (min-width: 768px) and (max-width: 1064px) {
-    .navbar{
-        display: block;
-        li{
-            width: 50%; /* Кожен елемент займає половину ширини рядка */
-            text-align: center; /* Вирівнює текст по центру */
-            box-sizing: border-box; /* Враховує внутрішні відступи та рамки в розрахунках ширини */
-            padding: 10px; /* Додає відступи */
-        }
-        a {
-            display: block; /* Робить посилання блочними елементами */
-            text-decoration: none; /* Видаляє підкреслення посилань */
-            transition: background-color 0.3s ease, color 0.3s ease; /* Плавна анімація зміни кольору фону та тексту */
-            padding: 8px 0; /* Додає відступи зверху та знизу */
-          }
-        li:hover a {
-            background-color: #ddd; /* Змінює колір фону при наведенні */
-            color: #333; /* Змінює колір тексту при наведенні */
-          }
-    }
-    .navbar2{
+      
+      .navbar .menu-btn {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+      
+      .navbar .nav-links {
+        text-align: left;
+        list-style: none;
+        padding: 0;
+        margin: 0;
         display: none;
-    }
+        top: 100%;
+        z-index: 1;
+      }
+      
+      .navbar .nav-links li {
+        display: block;
+        margin-bottom: 10px; /* Add some spacing between each link */
+      }
+      
+      .navbar .nav-links li a {
+        text-decoration: none;
+        color: white;
+        padding: 5px 10px;
+        border: 1px solid transparent;
+        transition: border-color 0.3s ease;
+        display: block; /* Display links as block elements */
+      }
+      
+      .navbar .nav-links li a:hover {
+        border-color: white;
+      }
+    
+      .navbar .show {
+        display: block; /* Show the dropdown menu */
+      }
 }
 
  
