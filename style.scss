@@ -79,8 +79,6 @@ h1, h2, h3, h4 {
     }
   }
   
-  
-
 .container {
     margin-top: 1em;
     display: flex;
@@ -93,38 +91,38 @@ h1, h2, h3, h4 {
     max-width: 800px;
     width: 70%;
     background-color: #fff;
-    padding: 20px;
+    padding-left: 1em;
     box-sizing: border-box;
     border: 1px solid #ddd;
-    border-radius: 5px;
-    
+    border-radius: 0.4rem;
     h2 {
         color: #333; 
-        margin-bottom: 20px; 
+        margin-bottom: 1rem; 
         position: relative; /* Позиція для псевдоелемента */
         
         &::before {
             content: ""; /* Контент псевдоелемента */
             position: absolute; /* Фіксування позиції псевдоелемента */
             top: 0; /* Початок зверху */
-            left: -20px; 
-            width: 10px; /* Ширина лінії */
+            left: -0.65em; 
+            width: 0.25em; /* Ширина лінії */
             height: 100%; /* Висота рівна висоті батьківського елемента */
             background-color: #666;
         }
     }
     ul {
         list-style-type: disc;
+        padding-inline-start: 1.2em;
         line-height: 1.6;
-        margin-bottom: 20px;
+        margin-bottom: 1em;
         hyphens: manual;
         display: flex; /* Змінено на flex */
         flex-direction: column; /* Змінено на вертикальну орієнтацію */
     }
     h3 { 
         color: #333; 
-        margin-top: 15px;
-        padding-bottom: 5px; 
+        margin-top: 1em;
+        padding-bottom: 0.4em; 
         position: relative; /* Позиція для псевдоелемента */
         
         &::after {
@@ -132,8 +130,8 @@ h1, h2, h3, h4 {
             position: absolute; /* Фіксування позиції псевдоелемента */
             bottom: 0; /* Позиціонувати внизу */
             left: 0; /* Почати зліва */
-            width: 50px; /* Ширина роздільної лінії */
-            height: 2px;
+            width: 2.5em; /* Ширина роздільної лінії */
+            height: 0.2em;
             background-color: #666;
         }
     }
@@ -145,13 +143,13 @@ h1, h2, h3, h4 {
     th {
         background-color: #333;
         color: #fff;
-        padding: 10px;
+        padding: 0.3em;
         text-align: left;
     }
     /* Стилі для комірок таблиці*/
     td {
         border: 1px solid #ddd;
-        padding: 10px;
+        padding: 0.23em;
     }
     /* Стилі для непарних рядків таблиці*/
     tr:nth-child(odd) {
@@ -163,7 +161,6 @@ h1, h2, h3, h4 {
 /* Стилі для класу*/
 p {
     line-height: 1.6;
-    margin-bottom: 20px;
 }
 
 section img {
@@ -178,38 +175,35 @@ section img {
 footer {
     background-color: #333;
     color: #fff;
-    padding: 20px;
+    padding: 1em;
     text-align: center;
     font-family: Arial, sans-serif;
-    p {
-        margin-bottom: 20px;
-    }
     ul {
         list-style: none;
         padding: 0;
-        margin-bottom: 20px;
+        margin-bottom: 1em;
         display: flex;
         justify-content: center; /* Центрування елементів */
-    }
-    ul li {
-        display: inline;
-        margin-right: 20px;
-    }
-    ul li a {
-        color: #fff;
-        text-decoration: none;
-        transition: color 0.3s ease;
-        
-        &:hover {
-            color: #ddd;
-        }
+        li {
+            display: inline;
+            margin-right: 1em;
+            a {
+                color: #fff;
+                text-decoration: none;
+                transition: color 0.3s ease;
+                
+                &:hover {
+                    color: #ddd;
+                }
+            }
+        } 
     }
     .social-icons a {
         display: inline-block;
-        margin-right: 10px;
+        margin-right: 0.5em;
         img {
-            width: 40px;
-            height: 40px;
+            width: 2em;
+            height: 2em;
             border-radius: 50%;
             transition: transform 0.3s ease;
             
@@ -226,271 +220,3 @@ iframe {
     margin: 0 auto; /* Центрує відео по горизонталі */
     max-width: 100%;
 }
-@media only screen and (min-width: 100px) and (max-width: 150px) {
-      footer{
-        padding-left: 20px;
-        .social-icons a img {
-            width: 20px;
-            height: 20px;
-            
-          }
-        ul {
-            padding-left: 20px;
-            flex-direction: column;
-            align-items: center;
-          }
-        p {
-            margin-bottom: 0px;
-        }
-    }
-    body {
-        font-size: 5.4px;
-    }
-    #content{
-        padding-top: 0px;
-        width: 100%;
-        h2 {
-            margin-bottom: 10px;
-        }
-        ul{
-            margin-left: -30px;
-            margin-bottom: 5px;
-        }
-        /* Стилі для заголовків таблиці*/
-        th { 
-            padding: 5px;
-        }
-        /* Стилі для комірок таблиці*/
-        td {
-            padding: 0px;
-        }
-    }
-}
-@media only screen and (min-width: 150px) and (max-width: 168px) {
-    footer{
-        .social-icons a img {
-            width: 20px;
-            height: 20px;
-          }
-        ul {
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 10px;
-          }
-        p {
-            margin-bottom: 5px;
-        }
-    } 
-    body {
-        font-size: 10px;
-    }
-    #content{
-        padding-top: 2px;
-        width: 100%;
-        h2 {
-            margin-bottom: 10px;
-        }
-        ul{
-            margin-left: -30px;
-        }
-        /* Стилі для заголовків таблиці*/
-        th { 
-            padding: 5px;
-        }
-        /* Стилі для комірок таблиці*/
-        td {
-            padding: 0px;
-        }
-    }
-}
-@media only screen and (min-width: 168px) and (max-width: 200px) {
-    footer{
-        .social-icons a img {
-            width: 22px;
-            height: 22px;
-          }
-        ul {
-            flex-direction: column;
-            align-items: center;
-          }
-        p {
-            margin-bottom: 6px;
-        }
-    } 
-    body {
-        font-size: 11px;
-    }
-    #content{
-        padding-top: 3px;
-        width: 100%;
-        h2 {
-        margin-bottom: 10px;
-        }
-        ul{
-            margin-left: -30px;
-        }
-        /* Стилі для заголовків таблиці*/
-        th { 
-            padding: 5px;
-        }
-        /* Стилі для комірок таблиці*/
-        td {
-            padding: 1px;
-        }
-    }
-}
-@media only screen and (min-width: 200px) and (max-width: 290px) {
-    footer{
-        .social-icons a img {
-            width: 24px;
-            height: 24px;
-          }
-        ul {
-            flex-direction: column;
-            align-items: center;
-          }
-        p {
-            margin-bottom: 6px;
-        }
-    } 
-    body {
-        font-size: 14px;
-    }
-    #content{
-        padding-top: 4px;
-        width: 100%;
-        h2 {
-        margin-bottom: 10px;
-        }
-        ul{
-            margin-left: -20px;
-        }
-        /* Стилі для заголовків таблиці*/
-        th { 
-            padding: 5px;
-        }
-        /* Стилі для комірок таблиці*/
-        td {
-            padding: 1px;
-        }
-    }
-}
-@media only screen and (min-width: 290px) and (max-width: 410px) {
-    footer{
-        .social-icons a img {
-            width: 26px;
-            height: 26px;
-          }
-        ul {
-            flex-direction: column;
-            align-items: center;
-          }
-        p {
-            margin-bottom: 7px;
-        }
-    }
-    body {
-        font-size: 18px;
-    }
-    #content{
-        padding-top: 5px;
-        width: 100%;
-        h2 {
-        margin-bottom: 10px;
-        }
-        /* Стилі для заголовків таблиці*/
-        th { 
-            padding: 5px;
-        }
-        /* Стилі для комірок таблиці*/
-        td {
-            padding: 5px;
-        }
-    }
-}
-@media only screen and (min-width: 410px)and (max-width: 468px) {
-    footer{
-        .social-icons a img {
-            width: 28px;
-            height: 28px;
-          }
-        ul {
-            flex-direction: column;
-            align-items: center;
-          }
-        p {
-            margin-bottom: 8px;
-        }
-    }
-    body {
-        font-size: 19px;
-    }
-    #content{
-        padding-top: 8px;
-        width: 100%;
-    }
-}
-@media only screen and (min-width: 468px) and (max-width: 638px) {
-    footer{
-        .social-icons a img {
-            width: 30px;
-            height: 30px;
-          }
-        ul {
-            flex-direction: column;
-            align-items: center;
-          }
-        p {
-            margin-bottom: 9px;
-        }
-    }
-    #content {
-        padding-top: 10px;
-        width: 100%;
-      }
-}
-@media only screen and (max-width: 638px) {
-    .navbar {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        background-color: #333;
-        padding: 10px 20px;
-        .menu-btn {
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-        .nav-links {
-            text-align: left;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: none;
-            top: 100%;
-            z-index: 1;
-            li {
-                display: block;
-                margin-bottom: 10px; /* Add some spacing between each link */
-                a {
-                    text-decoration: none;
-                    color: white;
-                    padding: 5px 10px;
-                    border: 1px solid transparent;
-                    transition: border-color 0.3s ease;
-                    display: block; /* Display links as block elements */
-                }
-                a:hover {
-                    border-color: white;
-                }
-            }
-        }
-        .show {
-            display: block; /* Show the dropdown menu */
-        }
-      } 
-}
-
- 

@@ -95,16 +95,16 @@ h1, h2, h3, h4 {
   max-width: 800px;
   width: 70%;
   background-color: #fff;
-  padding: 20px;
+  padding-left: 1em;
   box-sizing: border-box;
   border: 1px solid #ddd;
-  border-radius: 5px;
+  border-radius: 0.4rem;
   /* Стилі для заголовків таблиці*/
   /* Стилі для комірок таблиці*/
   /* Стилі для непарних рядків таблиці*/ }
   #content h2 {
     color: #333;
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
     position: relative;
     /* Позиція для псевдоелемента */ }
     #content h2::before {
@@ -114,16 +114,17 @@ h1, h2, h3, h4 {
       /* Фіксування позиції псевдоелемента */
       top: 0;
       /* Початок зверху */
-      left: -20px;
-      width: 10px;
+      left: -0.65em;
+      width: 0.25em;
       /* Ширина лінії */
       height: 100%;
       /* Висота рівна висоті батьківського елемента */
       background-color: #666; }
   #content ul {
     list-style-type: disc;
+    padding-inline-start: 1.2em;
     line-height: 1.6;
-    margin-bottom: 20px;
+    margin-bottom: 1em;
     hyphens: manual;
     display: flex;
     /* Змінено на flex */
@@ -131,8 +132,8 @@ h1, h2, h3, h4 {
     /* Змінено на вертикальну орієнтацію */ }
   #content h3 {
     color: #333;
-    margin-top: 15px;
-    padding-bottom: 5px;
+    margin-top: 1em;
+    padding-bottom: 0.4em;
     position: relative;
     /* Позиція для псевдоелемента */ }
     #content h3::after {
@@ -144,9 +145,9 @@ h1, h2, h3, h4 {
       /* Позиціонувати внизу */
       left: 0;
       /* Почати зліва */
-      width: 50px;
+      width: 2.5em;
       /* Ширина роздільної лінії */
-      height: 2px;
+      height: 0.2em;
       background-color: #666; }
   #content table {
     width: 100%;
@@ -154,18 +155,17 @@ h1, h2, h3, h4 {
   #content th {
     background-color: #333;
     color: #fff;
-    padding: 10px;
+    padding: 0.3em;
     text-align: left; }
   #content td {
     border: 1px solid #ddd;
-    padding: 10px; }
+    padding: 0.23em; }
   #content tr:nth-child(odd) {
     background-color: #f2f2f2; }
 
 /* Стилі для класу*/
 p {
-  line-height: 1.6;
-  margin-bottom: 20px; }
+  line-height: 1.6; }
 
 section img {
   max-width: 100%;
@@ -181,33 +181,31 @@ section img {
 footer {
   background-color: #333;
   color: #fff;
-  padding: 20px;
+  padding: 1em;
   text-align: center;
   font-family: Arial, sans-serif; }
-  footer p {
-    margin-bottom: 20px; }
   footer ul {
     list-style: none;
     padding: 0;
-    margin-bottom: 20px;
+    margin-bottom: 1em;
     display: flex;
     justify-content: center;
     /* Центрування елементів */ }
-  footer ul li {
-    display: inline;
-    margin-right: 20px; }
-  footer ul li a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s ease; }
-    footer ul li a:hover {
-      color: #ddd; }
+    footer ul li {
+      display: inline;
+      margin-right: 1em; }
+      footer ul li a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.3s ease; }
+        footer ul li a:hover {
+          color: #ddd; }
   footer .social-icons a {
     display: inline-block;
-    margin-right: 10px; }
+    margin-right: 0.5em; }
     footer .social-icons a img {
-      width: 40px;
-      height: 40px;
+      width: 2em;
+      height: 2em;
       border-radius: 50%;
       transition: transform 0.3s ease; }
       footer .social-icons a img:hover {
@@ -220,198 +218,3 @@ iframe {
   margin: 0 auto;
   /* Центрує відео по горизонталі */
   max-width: 100%; }
-
-@media only screen and (min-width: 100px) and (max-width: 150px) {
-  footer {
-    padding-left: 20px; }
-    footer .social-icons a img {
-      width: 20px;
-      height: 20px; }
-    footer ul {
-      padding-left: 20px;
-      flex-direction: column;
-      align-items: center; }
-    footer p {
-      margin-bottom: 0px; }
-  body {
-    font-size: 5.4px; }
-  #content {
-    padding-top: 0px;
-    width: 100%;
-    /* Стилі для заголовків таблиці*/
-    /* Стилі для комірок таблиці*/ }
-    #content h2 {
-      margin-bottom: 10px; }
-    #content ul {
-      margin-left: -30px;
-      margin-bottom: 5px; }
-    #content th {
-      padding: 5px; }
-    #content td {
-      padding: 0px; } }
-
-@media only screen and (min-width: 150px) and (max-width: 168px) {
-  footer .social-icons a img {
-    width: 20px;
-    height: 20px; }
-  footer ul {
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 10px; }
-  footer p {
-    margin-bottom: 5px; }
-  body {
-    font-size: 10px; }
-  #content {
-    padding-top: 2px;
-    width: 100%;
-    /* Стилі для заголовків таблиці*/
-    /* Стилі для комірок таблиці*/ }
-    #content h2 {
-      margin-bottom: 10px; }
-    #content ul {
-      margin-left: -30px; }
-    #content th {
-      padding: 5px; }
-    #content td {
-      padding: 0px; } }
-
-@media only screen and (min-width: 168px) and (max-width: 200px) {
-  footer .social-icons a img {
-    width: 22px;
-    height: 22px; }
-  footer ul {
-    flex-direction: column;
-    align-items: center; }
-  footer p {
-    margin-bottom: 6px; }
-  body {
-    font-size: 11px; }
-  #content {
-    padding-top: 3px;
-    width: 100%;
-    /* Стилі для заголовків таблиці*/
-    /* Стилі для комірок таблиці*/ }
-    #content h2 {
-      margin-bottom: 10px; }
-    #content ul {
-      margin-left: -30px; }
-    #content th {
-      padding: 5px; }
-    #content td {
-      padding: 1px; } }
-
-@media only screen and (min-width: 200px) and (max-width: 290px) {
-  footer .social-icons a img {
-    width: 24px;
-    height: 24px; }
-  footer ul {
-    flex-direction: column;
-    align-items: center; }
-  footer p {
-    margin-bottom: 6px; }
-  body {
-    font-size: 14px; }
-  #content {
-    padding-top: 4px;
-    width: 100%;
-    /* Стилі для заголовків таблиці*/
-    /* Стилі для комірок таблиці*/ }
-    #content h2 {
-      margin-bottom: 10px; }
-    #content ul {
-      margin-left: -20px; }
-    #content th {
-      padding: 5px; }
-    #content td {
-      padding: 1px; } }
-
-@media only screen and (min-width: 290px) and (max-width: 410px) {
-  footer .social-icons a img {
-    width: 26px;
-    height: 26px; }
-  footer ul {
-    flex-direction: column;
-    align-items: center; }
-  footer p {
-    margin-bottom: 7px; }
-  body {
-    font-size: 18px; }
-  #content {
-    padding-top: 5px;
-    width: 100%;
-    /* Стилі для заголовків таблиці*/
-    /* Стилі для комірок таблиці*/ }
-    #content h2 {
-      margin-bottom: 10px; }
-    #content th {
-      padding: 5px; }
-    #content td {
-      padding: 5px; } }
-
-@media only screen and (min-width: 410px) and (max-width: 468px) {
-  footer .social-icons a img {
-    width: 28px;
-    height: 28px; }
-  footer ul {
-    flex-direction: column;
-    align-items: center; }
-  footer p {
-    margin-bottom: 8px; }
-  body {
-    font-size: 19px; }
-  #content {
-    padding-top: 8px;
-    width: 100%; } }
-
-@media only screen and (min-width: 468px) and (max-width: 638px) {
-  footer .social-icons a img {
-    width: 30px;
-    height: 30px; }
-  footer ul {
-    flex-direction: column;
-    align-items: center; }
-  footer p {
-    margin-bottom: 9px; }
-  #content {
-    padding-top: 10px;
-    width: 100%; } }
-
-@media only screen and (max-width: 638px) {
-  .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #333;
-    padding: 10px 20px; }
-    .navbar .menu-btn {
-      background: none;
-      border: none;
-      color: white;
-      font-size: 1.5rem;
-      cursor: pointer; }
-    .navbar .nav-links {
-      text-align: left;
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: none;
-      top: 100%;
-      z-index: 1; }
-      .navbar .nav-links li {
-        display: block;
-        margin-bottom: 10px;
-        /* Add some spacing between each link */ }
-        .navbar .nav-links li a {
-          text-decoration: none;
-          color: white;
-          padding: 5px 10px;
-          border: 1px solid transparent;
-          transition: border-color 0.3s ease;
-          display: block;
-          /* Display links as block elements */ }
-        .navbar .nav-links li a:hover {
-          border-color: white; }
-    .navbar .show {
-      display: block;
-      /* Show the dropdown menu */ } }

@@ -1,0 +1,63 @@
+@media only screen and (min-width: 150px) and (max-width: 168px) {
+  body {
+    font-size: 10px; } }
+
+@media only screen and (min-width: 168px) and (max-width: 200px) {
+  body {
+    font-size: 11px; } }
+
+@media only screen and (min-width: 200px) and (max-width: 290px) {
+  body {
+    font-size: 14px; } }
+
+@media only screen and (min-width: 290px) and (max-width: 410px) {
+  body {
+    font-size: 18px; } }
+
+@media only screen and (min-width: 410px) and (max-width: 638px) {
+  body {
+    font-size: 19px; } }
+
+@media only screen and (max-width: 638px) {
+  footer ul {
+    flex-direction: column;
+    align-items: center; }
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
+    padding: 10px 20px; }
+    .navbar .menu-btn {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer; }
+    .navbar .nav-links {
+      text-align: left;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: none;
+      top: 100%;
+      z-index: 1; }
+      .navbar .nav-links li {
+        display: block;
+        margin-bottom: 10px;
+        /* Add some spacing between each link */ }
+        .navbar .nav-links li a {
+          text-decoration: none;
+          color: white;
+          padding: 5px 10px;
+          border: 1px solid transparent;
+          transition: border-color 0.3s ease;
+          display: block;
+          /* Display links as block elements */ }
+        .navbar .nav-links li a:hover {
+          border-color: white; }
+    .navbar .show {
+      display: block;
+      /* Show the dropdown menu */ }
+  #content {
+    width: 100%; } }
