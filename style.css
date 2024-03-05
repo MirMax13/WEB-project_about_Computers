@@ -1,13 +1,14 @@
 @charset "UTF-8";
 /* Загальні стилі*/
 header {
-  font-size: 19px;
   background-color: #41b3b3;
   /* Колір фону */
   color: #fff;
   /* Колір тексту */
-  padding: 20px;
+  padding: 1em;
   /* Відступи всередині header */
+  padding-left: 0.6em;
+  padding-right: 0.6em;
   text-align: center;
   /* Вирівнювання тексту по центру */
   font-family: Verdana, sans-serif;
@@ -90,7 +91,7 @@ h1, h2, h3, h4 {
   border-color: white; }
 
 .container {
-  margin-top: 50px;
+  margin-top: 1em;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -111,7 +112,6 @@ h1, h2, h3, h4 {
   /* Стилі для непарних рядків таблиці*/ }
   #content h2 {
     color: #333;
-    font-size: 24px;
     margin-bottom: 20px;
     position: relative;
     /* Позиція для псевдоелемента */ }
@@ -139,7 +139,6 @@ h1, h2, h3, h4 {
     /* Змінено на вертикальну орієнтацію */ }
   #content h3 {
     color: #333;
-    font-size: 1.5rem;
     margin-top: 15px;
     padding-bottom: 5px;
     position: relative;
@@ -242,12 +241,6 @@ iframe {
       align-items: center; }
     footer p {
       margin-bottom: 0px; }
-  .container {
-    margin-top: 10px; }
-  header {
-    font-size: 6px;
-    padding: 5px;
-    /* Відступи всередині header */ }
   body {
     font-size: 5.4px; }
   #content {
@@ -256,10 +249,7 @@ iframe {
     /* Стилі для заголовків таблиці*/
     /* Стилі для комірок таблиці*/ }
     #content h2 {
-      font-size: 10px;
       margin-bottom: 10px; }
-    #content h3 {
-      font-size: 0.5rem; }
     #content ul {
       margin-left: -30px;
       margin-bottom: 5px; }
@@ -278,12 +268,6 @@ iframe {
     margin-bottom: 10px; }
   footer p {
     margin-bottom: 5px; }
-  .container {
-    margin-top: 10px; }
-  header {
-    font-size: 9px;
-    padding: 5px;
-    /* Відступи всередині header */ }
   body {
     font-size: 10px; }
   #content {
@@ -292,10 +276,7 @@ iframe {
     /* Стилі для заголовків таблиці*/
     /* Стилі для комірок таблиці*/ }
     #content h2 {
-      font-size: 15px;
       margin-bottom: 10px; }
-    #content h3 {
-      font-size: 0.8rem; }
     #content ul {
       margin-left: -30px; }
     #content th {
@@ -312,12 +293,6 @@ iframe {
     align-items: center; }
   footer p {
     margin-bottom: 6px; }
-  .container {
-    margin-top: 10px; }
-  header {
-    font-size: 10px;
-    padding: 5px;
-    /* Відступи всередині header */ }
   body {
     font-size: 11px; }
   #content {
@@ -326,11 +301,7 @@ iframe {
     /* Стилі для заголовків таблиці*/
     /* Стилі для комірок таблиці*/ }
     #content h2 {
-      font-size: 16px;
       margin-bottom: 10px; }
-    #content h3 {
-      font-size: 0.9rem;
-      /* Розмір шрифту */ }
     #content ul {
       margin-left: -30px; }
     #content th {
@@ -347,12 +318,6 @@ iframe {
     align-items: center; }
   footer p {
     margin-bottom: 6px; }
-  .container {
-    margin-top: 10px; }
-  header {
-    font-size: 13px;
-    padding: 5px;
-    /* Відступи всередині header */ }
   body {
     font-size: 14px; }
   #content {
@@ -361,11 +326,7 @@ iframe {
     /* Стилі для заголовків таблиці*/
     /* Стилі для комірок таблиці*/ }
     #content h2 {
-      font-size: 19px;
       margin-bottom: 10px; }
-    #content h3 {
-      font-size: 1.2rem;
-      /* Розмір шрифту */ }
     #content ul {
       margin-left: -20px; }
     #content th {
@@ -382,23 +343,15 @@ iframe {
     align-items: center; }
   footer p {
     margin-bottom: 7px; }
-  header {
-    font-size: 16px; }
   body {
     font-size: 18px; }
-  .container {
-    margin-top: 20px; }
   #content {
     padding-top: 5px;
     width: 100%;
     /* Стилі для заголовків таблиці*/
     /* Стилі для комірок таблиці*/ }
     #content h2 {
-      font-size: 22px;
       margin-bottom: 10px; }
-    #content h3 {
-      font-size: 1.3rem;
-      /* Розмір шрифту */ }
     #content th {
       padding: 5px; }
     #content td {
@@ -413,19 +366,11 @@ iframe {
     align-items: center; }
   footer p {
     margin-bottom: 8px; }
-  header {
-    font-size: 17px;
-    padding: 10px;
-    /* Відступи всередині header */ }
   body {
     font-size: 19px; }
-  .container {
-    margin-top: 30px; }
   #content {
     padding-top: 8px;
-    width: 100%; }
-    #content h2 {
-      font-size: 23px; } }
+    width: 100%; } }
 
 @media only screen and (min-width: 468px) and (max-width: 638px) {
   footer .social-icons a img {
@@ -436,8 +381,6 @@ iframe {
     align-items: center; }
   footer p {
     margin-bottom: 9px; }
-  .container {
-    margin-top: 35px; }
   #content {
     padding-top: 10px;
     width: 100%; } }
