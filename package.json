@@ -3,6 +3,8 @@
     "sass": "^1.71.1"
   },
   "scripts": {
-    "sass": "node-sass --watch style.scss style.css"
+    "sass:style": "node-sass --watch style.scss style.css",
+    "sass:media-queries": "node-sass --watch media-queries.scss media-queries.css",
+    "concurrent": "concurrently \"npm run sass:style\" \"npm run sass:media-queries\""
   }
 }
