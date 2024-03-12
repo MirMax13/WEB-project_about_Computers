@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <script src="public/form_script.js"></script>
+    <link rel="stylesheet" href="public/style.css">
+    <link rel="stylesheet" href="public/media-queries.css">
+</head>
+<body>
+    
+    <div class="container">
+        <section id="content">
+        <h1>Форма опитування</h1>
+    
+        <form action="submit_form.php" method="post" class="survey-form">
+            <div class="form-group">
+                <label for="name">Ваше ім'я:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="age">Ваш вік:</label>
+                <select id="age" name="age">
+                    <option value="under_18">Молодше 18 років</option>
+                    <option value="18_30">18-30 років</option>
+                    <option value="31_50">31-50 років</option>
+                    <option value="over_50">Старше 50 років</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="dob">Введіть точну дату народження:</label><br>
+                <input type="date" id="dob" name="dob">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Ваша електронна адреса:</label><br>
+                <input type="email" id="email" name="email" required>
+            </div>
+    
+            <div class="form-group">
+                <label for="phone">Ваш номер телефону:</label><br>
+                <input type="tel" id="phone" name="phone" pattern="[+][0-9]{12}" placeholder="+380XXXXXXXXX" required>
+            </div>
+    
+            <div class="form-group">
+                <label>Ви задоволені нашим сайтом?</label><br>
+                <div class="radio-group">
+                    <input type="radio" id="satisfied" name="satisfaction" value="satisfied">
+                    <label for="satisfied">Так</label>
+                    <input type="radio" id="not_satisfied" name="satisfaction" value="not_satisfied">
+                    <label for="not_satisfied">Ні</label>
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <label>Які послуги вам потрібні?</label><br>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="consultation" name="services[]" value="consultation">
+                    <label for="consultation">Консультація</label><br>
+                    <input type="checkbox" id="repair" name="services[]" value="repair">
+                    <label for="repair">Ремонт</label>
+                </div>
+            </div>
+    
+            
+    
+            <div class="form-group">
+                <label for="comments">Напишіть ваші коментарі:</label><br>
+                <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+            </div>
+    
+            <div class="form-group">
+                <label for="resume">Завантажте ваше резюме (PDF або DOCX):</label><br>
+                <input type="file" id="resume" name="resume">
+            </div>
+    
+            <div class="form-group">
+                <label>Як ви оцінюєте наш сервіс від 1 до 10?</label><br>
+                <div class="range-container">
+                    <input type="range" id="rating" name="rating" min="1" max="10" onchange="updateRatingValue(this.value)">
+                    <output for="rating" id="rating-output">5</output>
+                </div>
+            </div>
+    
+            <input type="submit" value="Надіслати">
+        </form>
+        </section>
+    </div>
+
+</body>
+</html>
