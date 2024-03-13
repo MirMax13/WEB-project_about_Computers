@@ -92,7 +92,7 @@ h1, h2, h3, h4 {
 
 /* Стилі для селектора по id*/
 #content {
-  max-width: 800px;
+  max-width: 900px;
   width: 70%;
   background-color: #fff;
   padding-left: 1em;
@@ -101,7 +101,8 @@ h1, h2, h3, h4 {
   border-radius: 0.4rem;
   /* Стилі для заголовків таблиці*/
   /* Стилі для комірок таблиці*/
-  /* Стилі для непарних рядків таблиці*/ }
+  /* Стилі для непарних рядків таблиці*/
+  /* Стилі для кнопок */ }
   #content h2 {
     color: #333;
     margin-bottom: 1rem;
@@ -151,7 +152,8 @@ h1, h2, h3, h4 {
       background-color: #666; }
   #content table {
     width: 100%;
-    border-collapse: collapse; }
+    border-collapse: collapse;
+    table-layout: fixed; }
   #content th {
     background-color: #333;
     color: #fff;
@@ -162,6 +164,21 @@ h1, h2, h3, h4 {
     padding: 0.23em; }
   #content tr:nth-child(odd) {
     background-color: #f2f2f2; }
+  #content .button {
+    background-color: #41b3b3;
+    border: none;
+    color: white;
+    padding: 1em 1.5em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0.25em 0.14em;
+    margin-bottom: 0.6em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; }
+  #content .button:hover {
+    background-color: #249191; }
 
 /* Стилі для класу*/
 p {

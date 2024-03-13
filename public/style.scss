@@ -87,7 +87,7 @@ h1, h2, h3, h4 {
 }
 /* Стилі для селектора по id*/
 #content {
-    max-width: 800px;
+    max-width: 900px;
     width: 70%;
     background-color: #fff;
     padding-left: 1em;
@@ -137,6 +137,7 @@ h1, h2, h3, h4 {
     table {
         width: 100%;
         border-collapse: collapse;
+        table-layout: fixed;
     }
     /* Стилі для заголовків таблиці*/
     th {
@@ -154,9 +155,27 @@ h1, h2, h3, h4 {
     tr:nth-child(odd) {
         background-color: #f2f2f2;
     }
-
-
+    /* Стилі для кнопок */
+    .button {
+        background-color: #41b3b3;
+        border: none;
+        color: white;
+        padding: 1em 1.5em;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        margin: 0.25em 0.14em;
+        margin-bottom: 0.6em;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+    
+    .button:hover {
+        background-color: #249191;
+    }
 }
+
 /* Стилі для класу*/
 p {
     line-height: 1.6;
@@ -268,8 +287,6 @@ input[type="submit"] {
         margin-right: 10px; /* Задаємо відступ між радіокнопками */
     }
 }
-
-
 .range-container {
     display: flex;
     align-items: center;
@@ -325,3 +342,4 @@ input[type="file"] {
     overflow: hidden; // Додано властивість overflow
     text-overflow: ellipsis; // Додано, щоб відображати "..." при обрізанні тексту
 }
+

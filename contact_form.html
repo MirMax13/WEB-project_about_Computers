@@ -16,16 +16,16 @@
         <form action="submit_form.php" method="post" class="survey-form">
             <div class="form-group">
                 <label for="name">Ваше ім'я:</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="name" maxlength="30" required>
             </div>
 
             <div class="form-group">
                 <label for="age">Ваш вік:</label>
                 <select id="age" name="age">
-                    <option value="under_18">Молодше 18 років</option>
-                    <option value="18_30">18-30 років</option>
-                    <option value="31_50">31-50 років</option>
-                    <option value="over_50">Старше 50 років</option>
+                    <option value="Молодше 18 років">Молодше 18 років</option>
+                    <option value="18-30 років">18-30 років</option>
+                    <option value="31-50 років">31-50 років</option>
+                    <option value="Старше 50 років">Старше 50 років</option>
                 </select>
             </div>
 
@@ -36,7 +36,7 @@
 
             <div class="form-group">
                 <label for="email">Ваша електронна адреса:</label><br>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" maxlength="50" required>
             </div>
     
             <div class="form-group">
@@ -47,9 +47,9 @@
             <div class="form-group">
                 <label>Ви задоволені нашим сайтом?</label><br>
                 <div class="radio-group">
-                    <input type="radio" id="satisfied" name="satisfaction" value="satisfied" required>
+                    <input type="radio" id="satisfied" name="satisfaction" value="Задоволений" required>
                     <label for="satisfied">Так</label>
-                    <input type="radio" id="not_satisfied" name="satisfaction" value="not_satisfied">
+                    <input type="radio" id="not_satisfied" name="satisfaction" value="Не задоволений">
                     <label for="not_satisfied">Ні</label>
                 </div>
             </div>
@@ -63,17 +63,15 @@
             </div>
     
             <div class="form-group">
-                <label>Що вам потрібно?</label><br>
+                <label>Яка ваша ціль?</label><br>
                 <div class="checkbox-group">
-                    <input type="checkbox" id="consultation" name="services[]" value="consultation">
+                    <input type="checkbox" id="consultation" name="services[]" value="Консультація">
                     <label for="consultation">Консультація</label><br>
-                    <input type="checkbox" id="repair" name="services[]" value="repair">
-                    <label for="repair">Ремонт</label>
-                    <input type="checkbox" id="feedback" name="services[]" value="feedback">
+                    <input type="checkbox" id="feedback" name="services[]" value="Відгук">
                     <label for="feedback">Відгук</label><br>
-                    <input type="checkbox" id="idea" name="services[]" value="idea">
+                    <input type="checkbox" id="idea" name="services[]" value="Ідея">
                     <label for="idea">Ідея</label><br>
-                    <input type="checkbox" id="other" name="services[]" value="other">
+                    <input type="checkbox" id="other" name="services[]" value="Інше">
                     <label for="other">Інше</label><br>
                 </div>
             </div>

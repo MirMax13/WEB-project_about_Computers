@@ -12,18 +12,19 @@ function filterByAge(age) {
     return surveyResults.filter(result => result.age === age);
 }
 
-// Функція фільтрує результати опитувань за задоволеністю сайтом
-function filterBySatisfaction(satisfaction) {
-    const surveyResults = getSurveyResultsFromLocalStorage();
-    return surveyResults.filter(result => result.satisfaction === satisfaction);
-}
-
 // Функція фільтрує результати опитувань за оцінкою сайту
 function filterByRating(rating) {
     const surveyResults = getSurveyResultsFromLocalStorage();
     return surveyResults.filter(result => result.rating === rating);
 }
-// Додайте аналогічний код для фільтрації за задоволеністю сайтом та оцінкою.
+
+// Функція фільтрує результати опитувань за потребами
+function filterByServices(services) {
+    const surveyResults = getSurveyResultsFromLocalStorage();
+    return surveyResults.filter(result => {
+        return services.every(service => result.services.includes(service));
+    });
+}
 
 // Додаємо обробник подій для кнопки фільтрації за віком
 document.getElementById('age-filter-button').addEventListener('click', function() {
@@ -31,30 +32,18 @@ document.getElementById('age-filter-button').addEventListener('click', function(
     const filteredResults = filterByAge(selectedAge);
     displayResults(filteredResults);
 });
-// Додаємо обробник подій для кнопки фільтрації за задоволеністю сайтом
-document.getElementById('satisfaction-filter-button').addEventListener('click', function() {
-    const satisfiedRadioButton = document.getElementById('satisfied-filter');
-    const notSatisfiedRadioButton = document.getElementById('not-satisfied-filter');
-    
-    let selectedSatisfaction;
-    if (satisfiedRadioButton.checked) {
-        selectedSatisfaction = satisfiedRadioButton.value;
-    } else if (notSatisfiedRadioButton.checked) {
-        selectedSatisfaction = notSatisfiedRadioButton.value;
-    } else {
-        console.error('Please select satisfaction option');
-        return;
-    }
-    
-    const filteredResults = filterBySatisfaction(selectedSatisfaction);
-    displayResults(filteredResults);
-});
-
 
 // Додаємо обробник подій для кнопки фільтрації за оцінкою сайту
 document.getElementById('rating-filter-button').addEventListener('click', function() {
     const ratingValue = document.getElementById('rating-output').value;
     const filteredResults = filterByRating(ratingValue);
+    displayResults(filteredResults);
+});
+
+// Додаємо обробник подій для кнопки фільтрації за потребами
+document.getElementById('services-filter-button').addEventListener('click', function() {
+    const selectedServices = Array.from(document.querySelectorAll('input[name="services"]:checked')).map(service => service.value);
+    const filteredResults = filterByServices(selectedServices);
     displayResults(filteredResults);
 });
 
@@ -68,11 +57,36 @@ function displayResults(results) {
         return;
     }
 
+    const table = document.createElement('table');
+    table.innerHTML = `
+        <thead>
+            <tr>
+                <th>Ім'я</th>
+                <th>Вік</th>
+                <th>Мета звернення</th>
+                <th>Оцінка</th>
+                <th>Коментар</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    `;
+
+    const tbody = table.querySelector('tbody');
     results.forEach(result => {
-        const resultElement = document.createElement('div');
-        resultElement.textContent = JSON.stringify(result);
-        surveyResultsElement.appendChild(resultElement);
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td>${result.name}</td>
+            <td>${result.age}</td>
+            <td>${result.services}</td>
+            <td>${result.rating}</td>
+            <td>${result.comments}</td>
+            
+        `;
+        tbody.appendChild(row);
     });
+
+    surveyResultsElement.appendChild(table);
 }
 
 // Відображення результатів опитувань при завантаженні сторінки
