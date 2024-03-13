@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filters</title>
+</head>
+<body>
+    <h1>Фільтри опитувань</h1>
+    
+    <!-- Фільтр за віком -->
+    <div>
+        <h2>Фільтр за віком</h2>
+        <select id="age-filter">
+            <option value="under_18">Молодше 18 років</option>
+            <option value="18_30">18-30 років</option>
+            <option value="31_50">31-50 років</option>
+            <option value="over_50">Старше 50 років</option>
+        </select>
+        <button id="age-filter-button">Фільтрувати</button>
+    </div>
+
+    <!-- Фільтр за задоволеністю сайтом -->
+    <div>
+        <h2>Фільтр за задоволеністю сайтом</h2>
+        <input type="radio" id="satisfied-filter" name="satisfaction" value="satisfied">
+        <label for="satisfied-filter">Так</label>
+        <input type="radio" id="not-satisfied-filter" name="satisfaction" value="not_satisfied">
+        <label for="not-satisfied-filter">Ні</label>
+        <button id="satisfaction-filter-button">Фільтрувати</button>
+    </div>
+
+    <!-- Фільтр за оцінкою сайту -->
+    <div>
+        <h2>Фільтр за оцінкою сайту</h2>
+        <input type="range" id="rating" name="rating" min="1" max="10" onchange="updateRatingValue(this.value)">
+        <output for="rating-filter" id="rating-output">5</output>
+        <button id="rating-filter-button">Фільтрувати</button>
+    </div>
+    
+    <!-- Відображення результатів опитувань -->
+    <div id="survey-results">
+        <!-- Сюди будуть додаватися результати опитувань після фільтрації -->
+    </div>
+
+    <script src="public/filter_script.js"></script>
+</body>
+</html>

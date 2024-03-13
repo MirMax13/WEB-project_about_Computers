@@ -278,9 +278,9 @@ input[type="submit"] {
   align-items: center; }
   .checkbox-group input[type="checkbox"] {
     display: none; }
-    .checkbox-group input[type="checkbox"] :checked + label {
-      background-color: #4CAF50;
-      color: white; }
+  .checkbox-group input[type="checkbox"]:checked + label {
+    background-color: #4CAF50;
+    color: white; }
   .checkbox-group label {
     display: inline-block;
     padding: 0.5em 1em;

@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
-    <script src="public/form_script.js"></script>
     <link rel="stylesheet" href="public/style.css">
     <link rel="stylesheet" href="public/media-queries.css">
 </head>
@@ -48,7 +47,7 @@
             <div class="form-group">
                 <label>Ви задоволені нашим сайтом?</label><br>
                 <div class="radio-group">
-                    <input type="radio" id="satisfied" name="satisfaction" value="satisfied">
+                    <input type="radio" id="satisfied" name="satisfaction" value="satisfied" required>
                     <label for="satisfied">Так</label>
                     <input type="radio" id="not_satisfied" name="satisfaction" value="not_satisfied">
                     <label for="not_satisfied">Ні</label>
@@ -94,5 +93,6 @@
         </section>
     </div>
 
+    <script src="public/form_script.js"></script>
 </body>
 </html>

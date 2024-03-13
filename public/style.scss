@@ -288,10 +288,11 @@ input[type="submit"] {
     align-items: center;
     input[type="checkbox"] {
         display: none;
-        :checked + label {
-            background-color: #4CAF50;
-            color: white;
-        }
+        
+    }
+    input[type="checkbox"]:checked + label {
+        background-color: #4CAF50;
+        color: white;
     }
     label {
         display: inline-block;
