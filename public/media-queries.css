@@ -39,3 +39,38 @@
     /* Show the dropdown menu */ }
   #content {
     width: 100%; } }
+
+@media only screen and (max-width: 1050px) {
+  #survey-results table {
+    border: 0; }
+  #survey-results table caption {
+    font-size: 1.3em; }
+  #survey-results table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px; }
+  #survey-results table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em; }
+  #survey-results table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right; }
+  #survey-results table td::before {
+    /*
+            * aria-label has no advantage, it won't be read inside a table
+            content: attr(aria-label);
+            */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase; }
+  #survey-results table td:last-child {
+    border-bottom: 0; } }

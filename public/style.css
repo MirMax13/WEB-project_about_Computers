@@ -99,9 +99,6 @@ h1, h2, h3, h4 {
   box-sizing: border-box;
   border: 1px solid #ddd;
   border-radius: 0.4rem;
-  /* Стилі для заголовків таблиці*/
-  /* Стилі для комірок таблиці*/
-  /* Стилі для непарних рядків таблиці*/
   /* Стилі для кнопок */ }
   #content h2 {
     color: #333;
@@ -150,20 +147,44 @@ h1, h2, h3, h4 {
       /* Ширина роздільної лінії */
       height: 0.2em;
       background-color: #666; }
-  #content table {
-    width: 100%;
+  #content #year {
+    /* Стилі для заголовків таблиці*/
+    /* Стилі для комірок таблиці*/
+    /* Стилі для непарних рядків таблиці*/ }
+    #content #year table {
+      width: 100%;
+      border-collapse: collapse; }
+    #content #year th {
+      background-color: #333;
+      color: #fff;
+      padding: 0.3em;
+      text-align: left; }
+    #content #year td {
+      border: 1px solid #ddd;
+      padding: 0.23em; }
+    #content #year tr:nth-child(odd) {
+      background-color: #f2f2f2; }
+  #content #survey-results table {
+    border: 1px solid #ccc;
     border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
     table-layout: fixed; }
-  #content th {
-    background-color: #333;
-    color: #fff;
-    padding: 0.3em;
-    text-align: left; }
-  #content td {
-    border: 1px solid #ddd;
-    padding: 0.23em; }
-  #content tr:nth-child(odd) {
-    background-color: #f2f2f2; }
+    #content #survey-results table caption {
+      font-size: 1.5em;
+      margin: .5em 0 .75em; }
+    #content #survey-results table tr {
+      background-color: #f8f8f8;
+      border: 1px solid #ddd;
+      padding: .35em; }
+    #content #survey-results table th, #content #survey-results table td {
+      padding: .625em;
+      text-align: center; }
+    #content #survey-results table th {
+      font-size: .85em;
+      letter-spacing: .1em;
+      text-transform: uppercase; }
   #content .button {
     background-color: #41b3b3;
     border: none;

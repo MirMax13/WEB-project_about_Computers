@@ -134,26 +134,55 @@ h1, h2, h3, h4 {
             background-color: #666;
         }
     }
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        table-layout: fixed;
+    #year{
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        /* Стилі для заголовків таблиці*/
+        th {
+            background-color: #333;
+            color: #fff;
+            padding: 0.3em;
+            text-align: left;
+        }
+        /* Стилі для комірок таблиці*/
+        td {
+            border: 1px solid #ddd;
+            padding: 0.23em;
+        }
+        /* Стилі для непарних рядків таблиці*/
+        tr:nth-child(odd) {
+            background-color: #f2f2f2;
+        }
     }
-    /* Стилі для заголовків таблиці*/
-    th {
-        background-color: #333;
-        color: #fff;
-        padding: 0.3em;
-        text-align: left;
-    }
-    /* Стилі для комірок таблиці*/
-    td {
-        border: 1px solid #ddd;
-        padding: 0.23em;
-    }
-    /* Стилі для непарних рядків таблиці*/
-    tr:nth-child(odd) {
-        background-color: #f2f2f2;
+    #survey-results{
+        table {
+            border: 1px solid #ccc;
+            border-collapse: collapse;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            table-layout: fixed;
+            caption {
+                font-size: 1.5em;
+                margin: .5em 0 .75em;
+              }
+            tr {
+                background-color: #f8f8f8;
+                border: 1px solid #ddd;
+                padding: .35em;
+            }
+            th,td {
+                padding: .625em;
+                text-align: center;
+            }
+            th {
+                font-size: .85em;
+                letter-spacing: .1em;
+                text-transform: uppercase;
+            }
+          }
     }
     /* Стилі для кнопок */
     .button {

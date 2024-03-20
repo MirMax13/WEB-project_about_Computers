@@ -58,33 +58,34 @@ function displayResults(results) {
     }
 
     const table = document.createElement('table');
-    table.innerHTML = `
-        <thead>
-            <tr>
-                <th>Ім'я</th>
-                <th>Вік</th>
-                <th>Мета звернення</th>
-                <th>Оцінка</th>
-                <th>Коментар</th>
-            </tr>
-        </thead>
-        <tbody>
-        </tbody>
-    `;
+    const caption = document.createElement('caption');
+    caption.textContent = 'Statement Summary'; // Додаємо заголовок таблиці
+    table.appendChild(caption);
 
-    const tbody = table.querySelector('tbody');
+    const thead = document.createElement('thead');
+    const headerRow = document.createElement('tr');
+    const headers = ['Ім\'я', 'Вік', 'Мета звернення', 'Оцінка', 'Коментар'];
+    headers.forEach(headerText => {
+        const th = document.createElement('th');
+        th.textContent = headerText;
+        headerRow.appendChild(th);
+    });
+    thead.appendChild(headerRow);
+    table.appendChild(thead);
+
+    const tbody = document.createElement('tbody');
     results.forEach(result => {
         const row = document.createElement('tr');
         row.innerHTML = `
-            <td>${result.name}</td>
-            <td>${result.age}</td>
-            <td>${result.services}</td>
-            <td>${result.rating}</td>
-            <td>${result.comments}</td>
-            
+        <td data-label="Ім'я">${result.name}</td>
+        <td data-label="Вік">${result.age}</td>
+        <td data-label="Мета звернення">${result.services}</td>
+        <td data-label="Оцінка">${result.rating}</td>
+        <td data-label="Коментар">${result.comments}</td>
         `;
         tbody.appendChild(row);
     });
+    table.appendChild(tbody);
 
     surveyResultsElement.appendChild(table);
 }
