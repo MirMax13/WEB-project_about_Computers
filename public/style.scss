@@ -203,6 +203,28 @@ h1, h2, h3, h4 {
     .button:hover {
         background-color: #249191;
     }
+
+    .feedback {
+        background-color: #d1e4f0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 0.5em;
+        margin-top: 0.5em;
+        margin-right: 1em;
+        .specificfeedback {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .numpartscorrect {
+            font-style: italic;
+            margin-bottom: 0.25em;
+        }
+        .rightanswer {
+            p {
+                margin: 0.15em 0;
+            }
+        }
+    }
 }
 
 /* Стилі для класу*/

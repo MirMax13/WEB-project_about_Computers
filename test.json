@@ -1,0 +1,122 @@
+{
+    "testName": "Тест з комп'ютерних знань",
+    "questions": [
+    {
+        "question": "Які з перелічених параметрів характеризують процесор?",
+        "answers": [
+            {
+                "answer": "Частота",
+                "isCorrect": true
+            },
+            {
+                "answer": "Кількість ядер",
+                "isCorrect": true
+            },
+            {
+                "answer": "Швидкість читання",
+                "isCorrect": false
+            },
+            {
+                "answer": "Кеш-пам'ять",
+                "isCorrect": true
+            },
+            {
+                "answer": "Швидкість запису",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "question": "Що таке апаратне забезпечення?",
+        "answers": [
+            {
+                "answer": "Будь-яка частина комп’ютера, яка має фізичну структуру",
+                "isCorrect": true
+            },
+            {
+                "answer": "Будь-який набір програм, який використовується для вирішення певних завдань",
+                "isCorrect": false
+            },
+            {
+                "answer": "Система управління пам'яттю",
+                "isCorrect": false
+            },
+            {
+                "answer": "Висока швидкість передачі даних",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "question": "Які приклади апаратного забезпечення?",
+        "answers": [
+            {
+                "answer": "Процесор",
+                "isCorrect": true
+            },
+            {
+                "answer": "Операційна система",
+                "isCorrect": false
+            },
+            {
+                "answer": "Монітор",
+                "isCorrect": true
+            },
+            {
+                "answer": "Текстовий редактор",
+                "isCorrect": false
+            },
+            {
+                "answer": "Клавіатура",
+                "isCorrect": true
+            },
+            {
+                "answer": "Відеокарта",
+                "isCorrect": true
+            }
+        ]
+    },
+    {
+        "question": "Якими були перші комп'ютери?",
+        "answers": [
+            {
+                "answer": "Великими та незручними",
+                "isCorrect": true
+            },
+            {
+                "answer": "Маленькими та зручними",
+                "isCorrect": false
+            },
+            {
+                "answer": "Швидкими та потужними",
+                "isCorrect": false
+            },
+            {
+                "answer": "Дешевими та доступними",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "question": "Коли був створений перший комп'ютер?",
+        "answers": [
+            {
+                "answer": "1940 рік",
+                "isCorrect": false
+            },
+            {
+                "answer": "1950 рік",
+                "isCorrect": false
+            },
+            {
+                "answer": "1946 рік",
+                "isCorrect": true
+            },
+            {
+                "answer": "1945 рік",
+                "isCorrect": false
+            }
+        ]
+    }   
+    ]
+}
