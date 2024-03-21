@@ -147,36 +147,34 @@ h1, h2, h3, h4 {
       /* Ширина роздільної лінії */
       height: 0.2em;
       background-color: #666; }
-  #content #year {
-    /* Стилі для заголовків таблиці*/
+  #content table {
+    width: 100%;
+    border-collapse: collapse; }
+    #content table th {
+      background-color: #333;
+      color: #fff; }
+    #content table td, #content table tr {
+      border: 1px solid #ddd; }
+  #content #year table {
     /* Стилі для комірок таблиці*/
     /* Стилі для непарних рядків таблиці*/ }
-    #content #year table {
-      width: 100%;
-      border-collapse: collapse; }
-    #content #year th {
-      background-color: #333;
-      color: #fff;
+    #content #year table th {
       padding: 0.3em;
       text-align: left; }
-    #content #year td {
-      border: 1px solid #ddd;
+    #content #year table td {
       padding: 0.23em; }
-    #content #year tr:nth-child(odd) {
+    #content #year table tr:nth-child(odd) {
       background-color: #f2f2f2; }
   #content #survey-results table {
     border: 1px solid #ccc;
-    border-collapse: collapse;
     margin: 0;
     padding: 0;
-    width: 100%;
     table-layout: fixed; }
     #content #survey-results table caption {
       font-size: 1.5em;
       margin: .5em 0 .75em; }
     #content #survey-results table tr {
       background-color: #f8f8f8;
-      border: 1px solid #ddd;
       padding: .35em; }
     #content #survey-results table th, #content #survey-results table td {
       padding: .625em;
@@ -252,9 +250,8 @@ footer {
 iframe {
   width: 100%;
   display: block;
-  /* Робить відео блоковим елементом */
   margin: 0 auto;
-  /* Центрує відео по горизонталі */
+  /* Центрування відео по горизонталі */
   max-width: 100%; }
 
 form {
@@ -295,10 +292,10 @@ input[type="submit"] {
 .radio-group {
   display: flex;
   flex-direction: row;
-  /* Змінюємо орієнтацію на горизонтальну */ }
+  /* Горизонтальна орієнтація */ }
   .radio-group input[type="radio"] {
     margin-right: 10px;
-    /* Задаємо відступ між радіокнопками */ }
+    /* Відступ між радіокнопками */ }
 
 .range-container {
   display: flex;
@@ -312,7 +309,7 @@ input[type="submit"] {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  /* Дозволяємо елементам переноситися на новий рядок */
+  /* Перенесення елементів на новий рядок */
   align-items: center; }
   .checkbox-group input[type="checkbox"] {
     display: none; }
