@@ -4,12 +4,13 @@ var myObstacles = [];
 var myScore;
 var scores = [];
 
+
 function startGame() {
     myObstacles = []; // Очищаємо масив перешкод
-    myGamePiece = new component(30, 30, "red", 10, 120);
+    myGamePiece = new component(30, 30, "../image/smiley.webp", 10, 120, "image");
     myScore = new component("30px", "Consolas", "black", 280, 40, "text");
-    clearInterval(myGameArea.interval); // Зупиняємо попередній інтервал, якщо він є
-    myGameArea.frameNo = 0; // Скидаємо значення frameNo
+    clearInterval(myGameArea.interval); // Зупинка попереднього інтервал, якщо він є
+    myGameArea.frameNo = 0;
     myGameArea.start();
 }
 
@@ -51,6 +52,10 @@ var myGameArea = {
 
 function component(width, height, color, x, y, type) {
     this.type = type;
+    if (type == "image") {
+        this.image = new Image();
+        this.image.src = color;
+    }
     this.width = width;
     this.height = height;
     this.speedX = 0;
@@ -63,6 +68,12 @@ function component(width, height, color, x, y, type) {
             ctx.font = this.width + " " + this.height;
             ctx.fillStyle = color;
             ctx.fillText(this.text, this.x, this.y);
+        }
+        if (type == "image" ) {
+            ctx.drawImage(this.image, 
+                this.x, 
+                this.y,
+                this.width, this.height);
         } else {
             ctx.fillStyle = color;
             ctx.fillRect(this.x, this.y, this.width, this.height);
@@ -142,8 +153,8 @@ function updateGameArea() {
         minGap = 50;
         maxGap = 200;
         gap = Math.floor(Math.random()*(maxGap-minGap+1)+minGap);
-        myObstacles.push(new component(10, height, "green", x, 0));
-        myObstacles.push(new component(10, myGameArea.canvas.height - height - gap, "green", x, height + gap));
+        myObstacles.push(new component(10, height, "#41b3b3", x, 0));
+        myObstacles.push(new component(10, myGameArea.canvas.height - height - gap, "#41b3b3", x, height + gap));
     }
     for (i = 0; i < myObstacles.length; i += 1) {
         myObstacles[i].speedX = -1;
@@ -165,22 +176,27 @@ function everyinterval(n) {
 }
 
 function moveup() {
+    myGamePiece.image.src = "../image/smiley.png";
     myGamePiece.speedY = -2; 
 }
 
 function movedown() {
+    myGamePiece.image.src = "../image/smiley.png";
     myGamePiece.speedY = 2; 
 }
 
 function moveleft() {
+    myGamePiece.image.src = "../image/smiley.png";
     myGamePiece.speedX = -2; 
 }
 
 function moveright() {
+    myGamePiece.image.src = "../image/smiley.png";
     myGamePiece.speedX = 2; 
 }
 
 function clearmove() {
+    myGamePiece.image.src = "../image/smiley.webp";
     myGamePiece.speedX = 0; 
     myGamePiece.speedY = 0; 
 }
