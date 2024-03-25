@@ -38,7 +38,9 @@
     display: block;
     /* Show the dropdown menu */ }
   #content {
-    width: 100%; } }
+    width: 100%; }
+    #content #buttonContainer {
+      display: flex; } }
 
 @media only screen and (max-width: 1050px) {
   #survey-results table {

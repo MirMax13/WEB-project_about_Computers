@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<style>
+</style>
+<link rel="stylesheet" href="../public/style.css">
+<link rel="stylesheet" href="../public/media-queries.css">
+</head>
+
+<script src="../public/game_script.js"></script>
+
+<body>
+<div class="container">
+    <section id="content">
+        <div style="text-align:center;">
+            <button onclick="startGame()" class="button">Start Game/Restart</button>
+        </div>
+        
+        <div id="buttonContainer">
+            <button id="moveUpButton" onmousedown="moveup()" class="button" onmouseup="clearmove()" ontouchstart="moveup()">UP</button>
+            <div>
+                <button id="moveLeftButton" onmousedown="moveleft()" class="button" onmouseup="clearmove()" ontouchstart="moveleft()">LEFT</button>
+                <button id="moveRightButton" onmousedown="moveright()" class="button" onmouseup="clearmove()" ontouchstart="moveright()">RIGHT</button>
+            </div>
+            <button id="moveDownButton" onmousedown="movedown()" class="button" onmouseup="clearmove()" ontouchstart="movedown()">DOWN</button>
+        </div>
+    </section>
+</div>
+</body>
+</html>

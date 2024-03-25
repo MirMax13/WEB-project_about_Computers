@@ -90,7 +90,8 @@ h1, h2, h3, h4 {
     max-width: 900px;
     width: 70%;
     background-color: #fff;
-    padding-left: 1em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
     box-sizing: border-box;
     border: 1px solid #ddd;
     border-radius: 0.4rem;
@@ -203,6 +204,18 @@ h1, h2, h3, h4 {
     .button:hover {
         background-color: #249191;
     }
+    #buttonContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #moveLeftButton, #moveRightButton {
+        margin-top: 10px;
+    }
+    #buttonContainer {
+        display: none;
+    }
 
     .feedback {
         background-color: #d1e4f0;
@@ -224,6 +237,12 @@ h1, h2, h3, h4 {
                 margin: 0.15em 0;
             }
         }
+    }
+    canvas {
+        border:1px solid #d3d3d3;
+        background-color: #f1f1f1;
+        margin-top: 1em;
+        max-width: 100%;
     }
 }
 

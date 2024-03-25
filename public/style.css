@@ -95,7 +95,8 @@ h1, h2, h3, h4 {
   max-width: 900px;
   width: 70%;
   background-color: #fff;
-  padding-left: 1em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
   box-sizing: border-box;
   border: 1px solid #ddd;
   border-radius: 0.4rem;
@@ -198,6 +199,14 @@ h1, h2, h3, h4 {
     transition: background-color 0.3s ease; }
   #content .button:hover {
     background-color: #249191; }
+  #content #buttonContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  #content #moveLeftButton, #content #moveRightButton {
+    margin-top: 10px; }
+  #content #buttonContainer {
+    display: none; }
   #content .feedback {
     background-color: #d1e4f0;
     border: 1px solid #ccc;
@@ -213,6 +222,11 @@ h1, h2, h3, h4 {
       margin-bottom: 0.25em; }
     #content .feedback .rightanswer p {
       margin: 0.15em 0; }
+  #content canvas {
+    border: 1px solid #d3d3d3;
+    background-color: #f1f1f1;
+    margin-top: 1em;
+    max-width: 100%; }
 
 /* Стилі для класу*/
 p {
