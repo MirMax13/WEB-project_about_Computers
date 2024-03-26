@@ -38,9 +38,7 @@
     display: block;
     /* Show the dropdown menu */ }
   #content {
-    width: 100%; }
-    #content #buttonContainer {
-      display: flex; } }
+    width: 100%; } }
 
 @media only screen and (max-width: 1050px) {
   #survey-results table {
@@ -58,8 +56,7 @@
       width: 1px; }
     #survey-results table tr {
       border-bottom: 3px solid #ddd;
-      display: block;
-      margin-bottom: .625em; }
+      display: block; }
     #survey-results table td {
       border-bottom: 1px solid #ddd;
       display: block;

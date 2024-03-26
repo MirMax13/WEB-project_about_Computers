@@ -12,6 +12,9 @@ function startGame() {
     clearInterval(myGameArea.interval); // Зупинка попереднього інтервал, якщо він є
     myGameArea.frameNo = 0;
     myGameArea.start();
+
+    var buttonContainer = document.getElementById("buttonContainer");
+    buttonContainer.style.display = "flex";
 }
 
 var myGameArea = {

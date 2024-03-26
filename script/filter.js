@@ -59,7 +59,7 @@ function displayResults(results) {
 
     const table = document.createElement('table');
     const caption = document.createElement('caption');
-    caption.textContent = 'Statement Summary'; // Додаємо заголовок таблиці
+    caption.textContent = 'Результат фільтрації'; // Заголовок таблиці
     table.appendChild(caption);
 
     const thead = document.createElement('thead');

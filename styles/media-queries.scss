@@ -50,9 +50,9 @@
     } 
     #content {
         width: 100%;
-        #buttonContainer {
-            display: flex;
-        }
+        // #buttonContainer {
+        //     display: flex;
+        // }
     }
 }
 @media only screen and (max-width : 1050px){
@@ -75,7 +75,6 @@
             tr {
                 border-bottom: 3px solid #ddd;
                 display: block;
-                margin-bottom: .625em;
               }
             td {
                 border-bottom: 1px solid #ddd;
