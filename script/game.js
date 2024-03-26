@@ -24,7 +24,7 @@ var myGameArea = {
         this.canvas.width = contentWidth;
         this.canvas.height = 270;
         this.context = this.canvas.getContext("2d");
-        document.getElementById("content").appendChild(this.canvas);
+        document.getElementById("game").appendChild(this.canvas);
         this.frameNo = 0;
         this.interval = setInterval(updateGameArea, 20);
         window.addEventListener('keydown', function(e) {

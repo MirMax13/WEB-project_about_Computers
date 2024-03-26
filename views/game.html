@@ -16,14 +16,17 @@
         <div style="text-align:center;">
             <button onclick="startGame()" class="button">Почати гру / Перезапуск</button>
         </div>
-        
+        <div id="game"></div>
         <div id="buttonContainer">
-            <button id="moveUpButton" onmousedown="moveup()" class="button" onmouseup="clearmove()" ontouchstart="moveup()">UP</button>
+            <button id="moveUpButton" onmousedown="moveup()" class="button" onmouseup="clearmove()" ontouchstart="moveup()">ВВЕРХ</button>
             <div>
-                <button id="moveLeftButton" onmousedown="moveleft()" class="button" onmouseup="clearmove()" ontouchstart="moveleft()">LEFT</button>
-                <button id="moveRightButton" onmousedown="moveright()" class="button" onmouseup="clearmove()" ontouchstart="moveright()">RIGHT</button>
+                <button id="moveLeftButton" onmousedown="moveleft()" class="button" onmouseup="clearmove()" ontouchstart="moveleft()">ВЛІВО</button>
+                <button id="moveRightButton" onmousedown="moveright()" class="button" onmouseup="clearmove()" ontouchstart="moveright()">ВПРАВО</button>
             </div>
-            <button id="moveDownButton" onmousedown="movedown()" class="button" onmouseup="clearmove()" ontouchstart="movedown()">DOWN</button>
+            <button id="moveDownButton" onmousedown="movedown()" class="button" onmouseup="clearmove()" ontouchstart="movedown()">ВНИЗ</button>
+        </div>
+        
+
         </div>
     </section>
 </div>
