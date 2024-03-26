@@ -19,5 +19,22 @@ window.addEventListener('DOMContentLoaded', function() {
   menuBtn.addEventListener('click', () => {
     navLinks.classList.toggle('show');
   });
+
+  const links = document.querySelectorAll(".nav-links a");
+
+  links.forEach(link => {
+    link.addEventListener("click", function(event) {
+      event.preventDefault();
+      const targetId = this.getAttribute("href");
+      const targetSection = document.querySelector(targetId);
+
+      if (targetSection) {
+        targetSection.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+      }
+    });
+  });
 });
 

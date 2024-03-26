@@ -268,12 +268,12 @@ footer {
   footer .social-icons a {
     display: inline-block;
     margin-right: 0.5em; }
-    footer .social-icons a img {
+    footer .social-icons a img, footer .social-icons a svg {
       width: 2em;
       height: 2em;
       border-radius: 50%;
       transition: transform 0.3s ease; }
-      footer .social-icons a img:hover {
+      footer .social-icons a img:hover, footer .social-icons a svg:hover {
         transform: scale(1.1); }
 
 iframe {
