@@ -93,6 +93,7 @@ h1, h2, h3, h4 {
 /* Стилі для селектора по id*/
 #content {
   max-width: 900px;
+  min-height: 76.9vh;
   width: 70%;
   background-color: #fff;
   padding-left: 0.5em;
