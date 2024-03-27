@@ -28,18 +28,18 @@ let myGameArea = {
         this.frameNo = 0;
         this.interval = setInterval(updateGameArea, 20);
         window.addEventListener('keydown', function(e) {
-            if (e.key === 'ArrowUp'|| e.key === 'w'|| e.key === 'W') {
+            if (e.key === 'ArrowUp'|| e.code === 'KeyW') {
                 moveup();
-            } else if (e.key === 'ArrowDown'|| e.key === 's'|| e.key === 'S') {
+            } else if (e.key === 'ArrowDown'|| e.code === 'KeyS') {
                 movedown();
-            } else if (e.key === 'ArrowLeft'|| e.key === 'a'|| e.key === 'A') {
+            } else if (e.key === 'ArrowLeft'|| e.code === 'KeyA') {
                 moveleft();
-            } else if (e.key === 'ArrowRight'|| e.key === 'd'|| e.key === 'D') {
+            } else if (e.key === 'ArrowRight'|| e.code === 'KeyD') {
                 moveright();
             }
         });
         window.addEventListener('keyup', function(e) {
-            if (e.key === 'ArrowUp' || e.key === 'ArrowDown'|| e.key === 'w'|| e.key === 's'|| e.key === 'S'|| e.key === 'W'|| e.key === 'ArrowLeft'|| e.key === 'ArrowRight'|| e.key === 'a'|| e.key === 'd'|| e.key === 'A'|| e.key === 'D') {
+            if (e.key === 'ArrowUp' || e.key === 'ArrowDown'|| e.key === 'ArrowLeft'|| e.key === 'ArrowRight'|| e.code === 'KeyD'|| e.code === 'KeyS'|| e.code === 'KeyW'|| e.code === 'KeyA') {
                 clearmove();
             }
         });
