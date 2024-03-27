@@ -2,11 +2,9 @@ function updateRatingValue(value) {
     document.getElementById("rating-output").textContent = value;
   }
 
-// Функція, яка викликається при натисканні на кнопку "Надіслати"
 function submitForm(event) {
-  event.preventDefault(); // Зупиняємо стандартну поведінку форми
+  event.preventDefault();
 
-  // Отримуємо дані з форми
   const formData = {
       name: document.getElementById('name').value,
       age: document.getElementById('age').value,
@@ -23,13 +21,11 @@ function submitForm(event) {
   // Отримуємо збережені дані з LocalStorage або створюємо новий масив
   let surveyResults = JSON.parse(localStorage.getItem('surveyResults')) || [];
 
-  // Додаємо новий результат опитування до масиву
   surveyResults.push(formData);
 
   // Зберігаємо оновлений масив у LocalStorage
   localStorage.setItem('surveyResults', JSON.stringify(surveyResults));
 
-  // Очищаємо дані форми
   document.getElementById('name').value = '';
   document.getElementById('age').value = '';
   document.getElementById('dob').value = '';
@@ -40,10 +36,7 @@ function submitForm(event) {
   document.querySelectorAll('input[name="services[]"]:checked').forEach(service => service.checked = false);
   document.getElementById('comments').value = '';
   document.getElementById('resume').value = '';
-
-  // Повідомлення про успішне надсилання форми
   alert('Ваша заявка надіслана');
 }
 
-// Додаємо обробник подій для форми
 document.querySelector('.survey-form').addEventListener('submit', submitForm);

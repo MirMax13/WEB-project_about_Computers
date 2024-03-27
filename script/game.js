@@ -1,8 +1,8 @@
 
-var myGamePiece;
-var myObstacles = [];
-var myScore;
-var scores = [];
+let myGamePiece;
+let myObstacles = [];
+let myScore;
+let scores = [];
 
 
 function startGame() {
@@ -13,14 +13,14 @@ function startGame() {
     myGameArea.frameNo = 0;
     myGameArea.start();
 
-    var buttonContainer = document.getElementById("buttonContainer");
+    let buttonContainer = document.getElementById("buttonContainer");
     buttonContainer.style.display = "flex";
 }
 
-var myGameArea = {
+let myGameArea = {
     canvas : document.createElement("canvas"),
     start : function() {
-        var contentWidth = document.getElementById("content").offsetWidth;
+        let contentWidth = document.getElementById("content").offsetWidth;
         this.canvas.width = contentWidth;
         this.canvas.height = 270;
         this.context = this.canvas.getContext("2d");
@@ -104,15 +104,15 @@ function component(width, height, color, x, y, type) {
         }     
     }
     this.crashWith = function(otherobj) {
-        var myleft = this.x;
-        var myright = this.x + (this.width);
-        var mytop = this.y;
-        var mybottom = this.y + (this.height);
-        var otherleft = otherobj.x;
-        var otherright = otherobj.x + (otherobj.width);
-        var othertop = otherobj.y;
-        var otherbottom = otherobj.y + (otherobj.height);
-        var crash = true;
+        let myleft = this.x;
+        let myright = this.x + (this.width);
+        let mytop = this.y;
+        let mybottom = this.y + (this.height);
+        let otherleft = otherobj.x;
+        let otherright = otherobj.x + (otherobj.width);
+        let othertop = otherobj.y;
+        let otherbottom = otherobj.y + (otherobj.height);
+        let crash = true;
         if ((mybottom < othertop) || (mytop > otherbottom) || (myright < otherleft) || (myleft > otherright)) {
             crash = false;
         }
@@ -121,7 +121,7 @@ function component(width, height, color, x, y, type) {
 }
 
 function updateGameArea() {
-    var x, height, gap, minHeight, maxHeight, minGap, maxGap;
+    let x, height, gap, minHeight, maxHeight, minGap, maxGap;
     for (i = 0; i < myObstacles.length; i += 1) {
         if (myGamePiece.crashWith(myObstacles[i])) {
             
@@ -129,14 +129,14 @@ function updateGameArea() {
             scores.sort(function(a, b) {
                 return b - a;
             });
-            var bestScores = "3 best results:\n";
-            var worstScores = "3 worst results:\n";
-            for (var i = 0; i < 3; i++) {
+            let bestScores = "3 best results:\n";
+            let worstScores = "3 worst results:\n";
+            for (let i = 0; i < 3; i++) {
                 if (scores[i] !== undefined) {
                     bestScores +=  (i + 1) + ") " + scores[i] + "\n";
                 }
             }
-            for (var i = scores.length - 1; i > scores.length - 4; i--) {
+            for (let i = scores.length - 1; i > scores.length - 4; i--) {
                 if (scores[i] !== undefined) {
                     worstScores +=  (scores.length - i) + ") " + scores[i] + "\n";
                 }

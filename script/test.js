@@ -160,16 +160,16 @@ function showResults() {
 
         let correctCount = 0;
         let incorrectCount = 0;
-        let isQuestionCorrect = true; // Додана змінна для визначення правильності відповіді на питання
-        let correctAnswers = []; // Змінна для зберігання правильних відповідей
+        let isQuestionCorrect = true; 
+        let correctAnswers = [];
         question.answers.forEach((answer, answerIndex) => {
             if (answer.isCorrect) {
-                maxPossibleScore += 1; // Increment maximum possible score for this question
-                correctAnswers.push(answer.answer); // Додаємо правильну відповідь до масиву
+                maxPossibleScore += 1;
+                correctAnswers.push(answer.answer);
                 if (userAnswers.includes(answerIndex)) {
                     correctCount++;
                 } else {
-                    isQuestionCorrect = false; // Якщо користувач не обрав правильну відповідь, встановлюємо значення відповідної змінної в false
+                    isQuestionCorrect = false;
                 }
             } else {
                 if (userAnswers.includes(answerIndex)) {
@@ -180,22 +180,18 @@ function showResults() {
 
         let questionScore = 0;
         if (correctCount === question.answers.filter(ans => ans.isCorrect).length && incorrectCount === 0) {
-            // All correct answers selected
             questionScore = 1;
         } else if (correctCount > 0 || incorrectCount > 0) {
-            // Partially correct answers selected
             questionScore = (correctCount - (incorrectCount * 0.9)) / maxPossibleScore;
         } else {
-            // No correct answers selected or only incorrect answers selected
             questionScore = 0;
         }
 
         totalScore += questionScore;
 
-        // **Виправлення:** Оновлення контейнера з результатами
         const feedbackContainer = answerContainer.querySelector('.feedback');
         if (feedbackContainer) {
-        feedbackContainer.remove();
+            feedbackContainer.remove();
         }
         const newFeedbackContainer = document.createElement('div');
         newFeedbackContainer.classList.add('feedback');
@@ -204,7 +200,6 @@ function showResults() {
         specificFeedback.textContent = isQuestionCorrect && incorrectCount === 0 ? 'Ваша відповідь правильна.' : (correctCount > 0 ? 'Ваша відповідь частково правильна.' : 'Ваша відповідь неправильна.');
         newFeedbackContainer.appendChild(specificFeedback);
         
-        // Додавання правильних відповідей, якщо їх більше однієї
         if (correctAnswers.length > 1) {
             const numPartsCorrect = document.createElement('div');
             numPartsCorrect.classList.add('numpartscorrect');
@@ -221,11 +216,9 @@ function showResults() {
             newFeedbackContainer.appendChild(rightAnswer);
         }
 
-        // Додавання контейнера з результатами до відповідного контейнера з питанням
         answerContainer.appendChild(newFeedbackContainer);
     });
 
-    // Display score
     if (totalScore < 0) {
         totalScore = 0;
     }
@@ -235,11 +228,10 @@ function showResults() {
 
 buildQuiz();
 
-// Button to show results
 const submitButton = document.createElement('button');
 submitButton.id = 'submit';
 submitButton.textContent = 'Завершити тест';
-submitButton.classList.add('button'); // Додаємо клас "button"
+submitButton.classList.add('button');
 submitButton.addEventListener('click', showResults);
 quizContainer.appendChild(submitButton);
 
