@@ -222,7 +222,10 @@ function showResults() {
     if (totalScore < 0) {
         totalScore = 0;
     }
-    alert(`Ваша оцінка: ${totalScore.toFixed(2)} з ${testData.questions.length}`);
+    Swal.fire({
+        title: "Ваша оцінка",
+        text: `${totalScore.toFixed(2)} з ${testData.questions.length}`,
+    });
 }
 
 

@@ -36,7 +36,11 @@ function submitForm(event) {
   document.querySelectorAll('input[name="services[]"]:checked').forEach(service => service.checked = false);
   document.getElementById('comments').value = '';
   document.getElementById('resume').value = '';
-  alert('Ваша заявка надіслана');
+  Swal.fire({
+    title: "Чудово!",
+    text: "Ваша заявка надіслана!",
+    icon: "success"
+  });
 }
 
 document.querySelector('.survey-form').addEventListener('submit', submitForm);
